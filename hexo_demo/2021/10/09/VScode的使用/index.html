@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lencamo.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="基础1、打开终端Ctrl + \ 2、打开开发者模式(检查)Ctrl + Shift + I">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VScode的使用">
+<meta property="og:url" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Lencamo">
+<meta property="og:description" content="基础1、打开终端Ctrl + \ 2、打开开发者模式(检查)Ctrl + Shift + I">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002143142797.png">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002121920459.png">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002230949346.png">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002215501952.png">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002221853172.png">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002145154038.png">
+<meta property="og:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002194608594.png">
+<meta property="article:published_time" content="2021-10-09T09:18:35.000Z">
+<meta property="article:modified_time" content="2021-10-09T09:35:56.542Z">
+<meta property="article:author" content="Lencamo">
+<meta property="article:tag" content="vscode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002143142797.png">
+
+
+<link rel="canonical" href="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/","path":"2021/10/09/VScode的使用/","title":"VScode的使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>VScode的使用 | Lencamo</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Lencamo</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录学习的点点滴滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-resources"><a href="/Resources/" rel="section"><i class="fa fa-book fa-fw"></i>Resources</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>博友集</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">1、打开终端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E6%89%93%E5%BC%80%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F-%E6%A3%80%E6%9F%A5"><span class="nav-number">1.2.</span> <span class="nav-text">2、打开开发者模式(检查)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%9F%A5%E6%89%BE%E4%BB%A3%E7%A0%81%E5%86%85%E5%AE%B9"><span class="nav-number">1.3.</span> <span class="nav-text">3、查找代码内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%83%E5%B1%80"><span class="nav-number">2.</span> <span class="nav-text">一、编辑器布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81git%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">二、git的分布式版本控制系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BD%8D%E4%BA%8Evscode%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="nav-number">3.1.</span> <span class="nav-text">1、位于vscode侧边栏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%8F%AF%E7%94%A8gitlens%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-number">3.2.</span> <span class="nav-text">2、可用gitlens插件管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%99%BA%E8%83%BD%E6%84%9F%E7%9F%A5"><span class="nav-number">4.</span> <span class="nav-text">四、智能感知</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E9%A6%96%E5%AD%97%E6%AF%8D%E6%84%9F%E5%BA%94%F0%9F%92%96"><span class="nav-number">4.1.</span> <span class="nav-text">1、首字母感应💖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E9%A2%9C%E8%89%B2%E6%84%9F%E5%BA%94"><span class="nav-number">4.2.</span> <span class="nav-text">2、颜色感应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81Emmet%E8%AF%AD%E6%B3%95%F0%9F%92%96"><span class="nav-number">5.</span> <span class="nav-text">五、Emmet语法💖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%EF%BC%81-Enter"><span class="nav-number">5.1.</span> <span class="nav-text">1、！+ Enter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81div-n"><span class="nav-number">5.2.</span> <span class="nav-text">2、div*n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81div-gt-p"><span class="nav-number">5.3.</span> <span class="nav-text">3、div&gt;p</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81div-p"><span class="nav-number">5.4.</span> <span class="nav-text">4、div+p</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81div-%E2%9C%A8"><span class="nav-number">5.5.</span> <span class="nav-text">5、div.   &#x2F;    #  ✨</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E5%90%8C%E6%97%B6%E9%80%89%E6%8B%A9%E4%B8%8A%E4%B8%8B%E5%A4%9A%E8%A1%8C%E7%9A%84%E5%90%8C%E4%B8%80%E5%88%97%E5%86%85%E5%AE%B9"><span class="nav-number">5.6.</span> <span class="nav-text">6、同时选择上下多行的同一列内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A%F0%9F%91%80"><span class="nav-number">5.7.</span> <span class="nav-text">示例：👀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">5.8.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81vscode%E6%8F%92%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text">六、vscode插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E9%80%9A%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="nav-number">6.1.</span> <span class="nav-text">1、通用插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A0%E3%80%81Auto-Rename-Tag"><span class="nav-number">6.1.1.</span> <span class="nav-text">①、Auto Rename Tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A1%E3%80%81Auto-Close-Tag"><span class="nav-number">6.1.2.</span> <span class="nav-text">②、Auto Close Tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A2%E3%80%81Prettier-Code-formatter"><span class="nav-number">6.1.3.</span> <span class="nav-text">③、Prettier-Code formatter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A3%E3%80%81Bracket-Pair-Colorizer-2"><span class="nav-number">6.1.4.</span> <span class="nav-text">④、Bracket Pair Colorizer 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A3%E3%80%81Live-Server"><span class="nav-number">6.1.5.</span> <span class="nav-text">④、Live Server</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A5%E3%80%81vscode-icons"><span class="nav-number">6.1.6.</span> <span class="nav-text">⑥、vscode-icons</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A6%E3%80%81Atom-One-Dark-Theme"><span class="nav-number">6.1.7.</span> <span class="nav-text">⑦、Atom One Dark Theme</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A7%E3%80%81koroFileHeader"><span class="nav-number">6.1.8.</span> <span class="nav-text">⑧、koroFileHeader</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="nav-number">6.2.</span> <span class="nav-text">2、学习使用插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML%E3%80%81CSS%EF%BC%9A"><span class="nav-number">6.2.1.</span> <span class="nav-text">HTML、CSS：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E8%AE%BE%E7%BD%AE"><span class="nav-number">7.</span> <span class="nav-text">七、设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%91%BD%E4%BB%A4-%E6%90%9C%E7%B4%A2"><span class="nav-number">7.0.1.</span> <span class="nav-text">查看所有命令(搜索)</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lencamo"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Lencamo</p>
+  <div class="site-description" itemprop="description">东隅已逝，桑榆非晚</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Lencamo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Lencamo" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/207141481@qq.com" title="E-Mail → 207141481@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://leetcode-cn.com/" title="https:&#x2F;&#x2F;leetcode-cn.com&#x2F;" rel="noopener" target="_blank">LeetCode</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.runoob.com/" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;" rel="noopener" target="_blank">菜鸟教程</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Lencamo" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lencamo">
+      <meta itemprop="description" content="东隅已逝，桑榆非晚">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lencamo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VScode的使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-09 17:18:35 / 修改时间：17:35:56" itemprop="dateCreated datePublished" datetime="2021-10-09T17:18:35+08:00">2021-10-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="1、打开终端"><a href="#1、打开终端" class="headerlink" title="1、打开终端"></a>1、打开终端</h3><p><code>Ctrl + \</code></p>
+<h3 id="2、打开开发者模式-检查"><a href="#2、打开开发者模式-检查" class="headerlink" title="2、打开开发者模式(检查)"></a>2、打开开发者模式(检查)</h3><p><code>Ctrl + Shift + I</code></p>
+<span id="more"></span>
+
+<h3 id="3、查找代码内容"><a href="#3、查找代码内容" class="headerlink" title="3、查找代码内容"></a>3、查找代码内容</h3><p><code>Ctrl + F</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wh411U7R5">https://www.bilibili.com/video/BV1Wh411U7R5</a></p>
+<h2 id="一、编辑器布局"><a href="#一、编辑器布局" class="headerlink" title="一、编辑器布局"></a>一、编辑器布局</h2><p>查看——编辑器布局</p>
+<h2 id="二、git的分布式版本控制系统"><a href="#二、git的分布式版本控制系统" class="headerlink" title="二、git的分布式版本控制系统"></a>二、git的分布式版本控制系统</h2><h3 id="1、位于vscode侧边栏"><a href="#1、位于vscode侧边栏" class="headerlink" title="1、位于vscode侧边栏"></a>1、位于vscode侧边栏</h3><p>（可以实现类似于Sourcetree的操作）</p>
+<h3 id="2、可用gitlens插件管理"><a href="#2、可用gitlens插件管理" class="headerlink" title="2、可用gitlens插件管理"></a>2、可用gitlens插件管理</h3><p>可以查看代码历史记录、查看branch及commit改动、</p>
+<h2 id="四、智能感知"><a href="#四、智能感知" class="headerlink" title="四、智能感知"></a>四、智能感知</h2><p>css、html、json、php、</p>
+<h3 id="1、首字母感应💖"><a href="#1、首字母感应💖" class="headerlink" title="1、首字母感应💖"></a>1、首字母感应💖</h3><p>例如（更多的可以自己尝试）</p>
+<p><code>bg</code>：background</p>
+<p><code>bgc</code>：background-color</p>
+<h3 id="2、颜色感应"><a href="#2、颜色感应" class="headerlink" title="2、颜色感应"></a>2、颜色感应</h3><p>触碰时可自定义<strong>透明度</strong></p>
+<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002143142797.png" alt="image-20211002143142797" style="zoom:67%;">
+
+<p>3、等等</p>
+<h2 id="五、Emmet语法💖"><a href="#五、Emmet语法💖" class="headerlink" title="五、Emmet语法💖"></a>五、Emmet语法💖</h2><blockquote>
+<p>Emmet语法官方文档：<a target="_blank" rel="noopener" href="https://docs.emmet.io/cheat-sheet/">https://docs.emmet.io/cheat-sheet/</a></p>
+</blockquote>
+<h3 id="1、！-Enter"><a href="#1、！-Enter" class="headerlink" title="1、！+ Enter"></a>1、！+ Enter</h3><p>HTML初始化</p>
+<h3 id="2、div-n"><a href="#2、div-n" class="headerlink" title="2、div*n"></a>2、div<span style="background-color:pink;">*</span>n</h3><blockquote>
+<!-- div*3 --> 
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>同类型兄弟间 相邻</p>
+<h3 id="3、div-gt-p"><a href="#3、div-gt-p" class="headerlink" title="3、div&gt;p"></a>3、div<span style="background-color:yellow;">&gt;</span>p</h3><blockquote>
+<!-- div>p -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>父子包含</p>
+<h3 id="4、div-p"><a href="#4、div-p" class="headerlink" title="4、div+p"></a>4、div<span style="background-color:green;">+</span>p</h3><blockquote>
+<!-- div+p -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>不同类型之间 相邻</p>
+<h3 id="5、div-✨"><a href="#5、div-✨" class="headerlink" title="5、div.   /    #  ✨"></a>5、div<span style="background-color:pink;">.</span><class_name>   /    <span style="background-color:red;">#</span><id_name>  ✨</id_name></class_name></h3><blockquote>
+<!-- div.news -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;news&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<!-- div#news -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;news&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>快速生成带有名字的标签</p>
+<h3 id="6、同时选择上下多行的同一列内容"><a href="#6、同时选择上下多行的同一列内容" class="headerlink" title="6、同时选择上下多行的同一列内容"></a>6、同时选择上下多行的同一列内容</h3><img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002121920459.png" alt="image-20211002121920459" style="zoom:67%;">
+
+<p><code>Shift + Alt + 拖动要控制的行数</code></p>
+<h3 id="示例：👀"><a href="#示例：👀" class="headerlink" title="示例：👀"></a>示例：👀</h3><blockquote>
+<!-- ul.header>(li>a.link)*5 -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<!-- div.search>div.logo{登录}+input[placeholder="keywords"] -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;search&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;logo&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;keywords&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<!-- ul>li.content$*5 -->
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;content1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;content2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;content3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;content4&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;content5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在设置中搜索Emmet，然后勾选：</p>
+<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002230949346.png" alt="image-20211002230949346" style="zoom: 67%;">
+
+
+
+<h2 id="六、vscode插件"><a href="#六、vscode插件" class="headerlink" title="六、vscode插件"></a>六、vscode插件</h2><blockquote>
+<p> <a href="https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categories&sortBy=Installs">vscode插件下载排行榜</a></p>
+</blockquote>
+<h3 id="1、通用插件"><a href="#1、通用插件" class="headerlink" title="1、通用插件"></a>1、通用插件</h3><h4 id="①、Auto-Rename-Tag"><a href="#①、Auto-Rename-Tag" class="headerlink" title="①、Auto Rename Tag"></a>①、Auto Rename Tag</h4><p>&emsp;&emsp;对称标签前后自动同步修改</p>
+<h4 id="②、Auto-Close-Tag"><a href="#②、Auto-Close-Tag" class="headerlink" title="②、Auto Close Tag"></a>②、Auto Close Tag</h4><p>&emsp;&emsp;对称标签前后自动同步删除</p>
+<h4 id="③、Prettier-Code-formatter"><a href="#③、Prettier-Code-formatter" class="headerlink" title="③、Prettier-Code formatter"></a>③、Prettier-Code formatter</h4><p>&emsp;&emsp;保存时自动格式化代码</p>
+<h4 id="④、Bracket-Pair-Colorizer-2"><a href="#④、Bracket-Pair-Colorizer-2" class="headerlink" title="④、Bracket Pair Colorizer 2"></a>④、Bracket Pair Colorizer 2</h4><p>&emsp;&emsp;括号高亮</p>
+<h4 id="④、Live-Server"><a href="#④、Live-Server" class="headerlink" title="④、Live Server"></a>④、Live Server</h4><p>&emsp;&emsp;实时预览</p>
+<h4 id="⑥、vscode-icons"><a href="#⑥、vscode-icons" class="headerlink" title="⑥、vscode-icons"></a>⑥、vscode-icons</h4><p>&emsp;&emsp;文件图标样式</p>
+<h4 id="⑦、Atom-One-Dark-Theme"><a href="#⑦、Atom-One-Dark-Theme" class="headerlink" title="⑦、Atom One Dark Theme"></a>⑦、Atom One Dark Theme</h4><p>&emsp;&emsp;个人比较喜欢的主题（IDEA里面也可以下载该主题）</p>
+<h4 id="⑧、koroFileHeader"><a href="#⑧、koroFileHeader" class="headerlink" title="⑧、koroFileHeader"></a>⑧、koroFileHeader</h4><p>&emsp;&emsp;项目或者作者基本信息声明文档File Heade</p>
+<blockquote>
+<p><strong>设置：</strong></p>
+<p>在设置里搜索file header，然后</p>
+</blockquote>
+<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002215501952.png" alt="image-20211002215501952" style="zoom:67%;">
+
+<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002221853172.png" alt="image-20211002221853172" style="zoom:67%;">
+
+<blockquote>
+<p><strong>使用：</strong></p>
+<p>&emsp;&emsp;在需要File Header时，输入Ctrl + Alt + i 即可</p>
+<p>使用该快捷键会自动在文件的最前面生成File Header信息</p>
+</blockquote>
+<h3 id="2、学习使用插件"><a href="#2、学习使用插件" class="headerlink" title="2、学习使用插件"></a>2、学习使用插件</h3><h4 id="HTML、CSS："><a href="#HTML、CSS：" class="headerlink" title="HTML、CSS："></a>HTML、CSS：</h4><p>&emsp;&emsp;1.CSS Peek: 快速查看class和id对应的CSS代码</p>
+<p>&emsp;&emsp;2.Icon Fonts: 字体图标库输入提示</p>
+<p>&emsp;&emsp;3.HTML Boilerplate: HTML初始化兼容性模板</p>
+<p>等等……后续更新😂</p>
+<h2 id="七、设置"><a href="#七、设置" class="headerlink" title="七、设置"></a>七、设置</h2><h4 id="查看所有命令-搜索"><a href="#查看所有命令-搜索" class="headerlink" title="查看所有命令(搜索)"></a>查看所有命令(搜索)</h4><p><code>Ctrl + Shift + P</code></p>
+<p>例： 更改settings.json文件</p>
+<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002145154038.png" alt="image-20211002145154038" style="zoom:50%;">
+
+<p>1、鼠标滚轮改变字体大小</p>
+<p>选择上面的<strong>Open Settings(JSON)</strong></p>
+<p>在里面加入一行：</p>
+<p><code>&quot;editor.mouseWheelZoom&quot;: true</code></p>
+<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002194608594.png" alt="image-20211002194608594" style="zoom:67%;">
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Lencamo
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lencamo.cn/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/" title="VScode的使用">https://lencamo.cn/2021/10/09/VScode的使用/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/vscode/" rel="tag"><i class="fa fa-tag"></i> vscode</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="IDEA的使用">
+                  <i class="fa fa-chevron-left"></i> IDEA的使用
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lencamo</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">17k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">16 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+	<span title="post.totalcount">
+     8.4k字 </span>
+    <!--<span title="站点总字数">17k</span>-->
+  
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script src="https://embed.widgetpack.com/widget.js" async></script>
+  <script class="next-config" data-name="rating" type="application/json">{"enable":true,"id":null,"color":"#fc6423"}</script>
+  <script src="/js/third-party/rating.js"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"Lencamo/discuss-utterances","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":180,"height":300,"hOffset":30,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
+</html>
