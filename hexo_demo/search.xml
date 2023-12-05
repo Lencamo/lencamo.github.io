@@ -17,7 +17,7 @@
 <p><code>bg</code>：background</p>
 <p><code>bgc</code>：background-color</p>
 <h3 id="2、颜色感应"><a href="#2、颜色感应" class="headerlink" title="2、颜色感应"></a>2、颜色感应</h3><p>触碰时可自定义<strong>透明度</strong></p>
-<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002143142797.png" alt="image-20211002143142797" style="zoom:67%;">
+<img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002143142797.png" alt="image-20211002143142797" style="zoom:67%;">
 
 <p>3、等等</p>
 <h2 id="五、Emmet语法💖"><a href="#五、Emmet语法💖" class="headerlink" title="五、Emmet语法💖"></a>五、Emmet语法💖</h2><blockquote>
@@ -52,7 +52,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;news&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>快速生成带有名字的标签</p>
-<h3 id="6、同时选择上下多行的同一列内容"><a href="#6、同时选择上下多行的同一列内容" class="headerlink" title="6、同时选择上下多行的同一列内容"></a>6、同时选择上下多行的同一列内容</h3><img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002121920459.png" alt="image-20211002121920459" style="zoom:67%;">
+<h3 id="6、同时选择上下多行的同一列内容"><a href="#6、同时选择上下多行的同一列内容" class="headerlink" title="6、同时选择上下多行的同一列内容"></a>6、同时选择上下多行的同一列内容</h3><img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002121920459.png" alt="image-20211002121920459" style="zoom:67%;">
 
 <p><code>Shift + Alt + 拖动要控制的行数</code></p>
 <h3 id="示例：👀"><a href="#示例：👀" class="headerlink" title="示例：👀"></a>示例：👀</h3><blockquote>
@@ -75,7 +75,7 @@
 
 </blockquote>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在设置中搜索Emmet，然后勾选：</p>
-<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002230949346.png" alt="image-20211002230949346" style="zoom: 67%;">
+<img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002230949346.png" alt="image-20211002230949346" style="zoom: 67%;">
 
 
 
@@ -94,9 +94,9 @@
 <p><strong>设置：</strong></p>
 <p>在设置里搜索file header，然后</p>
 </blockquote>
-<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002215501952.png" alt="image-20211002215501952" style="zoom:67%;">
+<img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002215501952.png" alt="image-20211002215501952" style="zoom:67%;">
 
-<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002221853172.png" alt="image-20211002221853172" style="zoom:67%;">
+<img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002221853172.png" alt="image-20211002221853172" style="zoom:67%;">
 
 <blockquote>
 <p><strong>使用：</strong></p>
@@ -109,13 +109,13 @@
 <p>等等……后续更新😂</p>
 <h2 id="七、设置"><a href="#七、设置" class="headerlink" title="七、设置"></a>七、设置</h2><h4 id="查看所有命令-搜索"><a href="#查看所有命令-搜索" class="headerlink" title="查看所有命令(搜索)"></a>查看所有命令(搜索)</h4><p><code>Ctrl + Shift + P</code></p>
 <p>例： 更改settings.json文件</p>
-<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002145154038.png" alt="image-20211002145154038" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002145154038.png" alt="image-20211002145154038" style="zoom:50%;">
 
 <p>1、鼠标滚轮改变字体大小</p>
 <p>选择上面的<strong>Open Settings(JSON)</strong></p>
 <p>在里面加入一行：</p>
 <p><code>&quot;editor.mouseWheelZoom&quot;: true</code></p>
-<img src="/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002194608594.png" alt="image-20211002194608594" style="zoom:67%;">
+<img src="/hexo_demo/2021/10/09/VScode%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211002194608594.png" alt="image-20211002194608594" style="zoom:67%;">
 ]]></content>
       <categories>
         <category>开发工具</category>
@@ -168,7 +168,7 @@
 <p>&emsp;&emsp;ls -lt &emsp;按时间排列列出所有文件</p>
 <p>&emsp;&emsp;ls -l  <file_name> &emsp;某个文件</file_name></p>
 </blockquote>
-<img src="/2021/10/09/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/image-20211009170800075.png" alt="image-20211009170800075" style="zoom:80%;">
+<img src="/hexo_demo/2021/10/09/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/image-20211009170800075.png" alt="image-20211009170800075" style="zoom:80%;">
 
 <br>
 
@@ -302,21 +302,21 @@
 <br>
 
 <h2 id="一、如何获得自己电脑的ip（WiFi的ip）"><a href="#一、如何获得自己电脑的ip（WiFi的ip）" class="headerlink" title="一、如何获得自己电脑的ip（WiFi的ip）"></a>一、如何获得自己电脑的ip（WiFi的ip）</h2><h3 id="1、通过cmd命令查看"><a href="#1、通过cmd命令查看" class="headerlink" title="1、通过cmd命令查看"></a>1、通过cmd命令查看</h3><p><code>ipconfig</code></p>
-<img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170315054.png" alt="image-20211009170315054" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170315054.png" alt="image-20211009170315054" style="zoom:50%;">
 
-<h3 id="2、直接点击WLAN查看"><a href="#2、直接点击WLAN查看" class="headerlink" title="2、直接点击WLAN查看"></a>2、直接点击WLAN查看</h3><img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170329694.png" alt="image-20211009170329694" style="zoom:50%;">
+<h3 id="2、直接点击WLAN查看"><a href="#2、直接点击WLAN查看" class="headerlink" title="2、直接点击WLAN查看"></a>2、直接点击WLAN查看</h3><img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170329694.png" alt="image-20211009170329694" style="zoom:50%;">
 
 <p>&emsp;&emsp;&emsp;&emsp;得到：</p>
-<img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170340567.png" alt="image-20211009170340567" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170340567.png" alt="image-20211009170340567" style="zoom:50%;">
 
 <br>
 
 <h2 id="二、搭建Linux节点"><a href="#二、搭建Linux节点" class="headerlink" title="二、搭建Linux节点"></a>二、搭建Linux节点</h2><p>&emsp;&emsp;首先要安装VMware、Centos，安装过程自行解决（我常用自定义安装）。但安装过程要特别注意下面两点：</p>
 <p>①模式要选择 <strong>桥接模式</strong></p>
-<img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170411604.png" alt="image-20211009170411604" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170411604.png" alt="image-20211009170411604" style="zoom:50%;">
 
 <p>②root密码设置要牢记（后面要设置的用户和密码为开机密码）</p>
-<img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170421908.png" alt="image-20211009170421908" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170421908.png" alt="image-20211009170421908" style="zoom:50%;">
 
 <h3 id="1、自动为Centos配置一个静态ip"><a href="#1、自动为Centos配置一个静态ip" class="headerlink" title="1、自动为Centos配置一个静态ip"></a>1、自动为Centos配置一个静态ip</h3><p>&emsp;&emsp;在安装好的Centos中鼠标右键——&gt;打开终端；然后进行下面的操作</p>
 <p><strong>①切换到root模式</strong></p>
@@ -324,7 +324,7 @@
 <p><strong>②获得一个静态ip</strong></p>
 <p><code>dhclient</code></p>
 <p><code>ifconfig </code></p>
-<img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170439518.png" alt="image-20211009170439518" style="zoom:67%;">
+<img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170439518.png" alt="image-20211009170439518" style="zoom:67%;">
 
 <blockquote>
 <p>显然：</p>
@@ -335,7 +335,7 @@
 <p><strong>③配置静态ip网卡</strong></p>
 <p><code>vim /etc/sysconfig/network-scripts/ifcfg-ens33</code></p>
 <p>i    （进入编辑模式：开始编辑ifcfg-ens33文件）</p>
-<img src="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170457650.png" alt="image-20211009170457650">
+<img src="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/image-20211009170457650.png" alt="image-20211009170457650">
 
 
 
@@ -389,7 +389,7 @@
 <p>&emsp;&emsp; 当然我对这个个人网站的定下的方向也很明确：<span style="background-color: yellow;">写一些作品合集、系列文章</span>。</p>
 <span id="more"></span>
 
-<p><img src="/2021/09/03/%E6%88%91%E4%B8%8Ehexo%E7%9A%84%E7%9B%B8%E9%81%87/%E5%BE%AE%E7%AC%91.jpg" alt="微笑"></p>
+<p><img src="/hexo_demo/2021/09/03/%E6%88%91%E4%B8%8Ehexo%E7%9A%84%E7%9B%B8%E9%81%87/%E5%BE%AE%E7%AC%91.jpg" alt="微笑"></p>
 <p>&emsp;&emsp;相对于博客园：(<a href="https://www.cnblogs.com/lencamo/">https://www.cnblogs.com/lencamo/</a> ) 的小打小闹，我的hexo博客可能更像一个长期的工程，每一项工程都是一个合集/一个系列；我相信在与hexo的相处中能够<code>不断的学习</code>，<code>不断的分享</code>，<code>不断的进步</code>。</p>
 <p>&emsp;&emsp;刚把得！! 💪💪💪</p>
 ]]></content>
@@ -435,14 +435,14 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">新建项目<span style="background-color: yellow;">workplace</span><img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001210724315.png" alt="image-20211001210724315" style="zoom:50%;"></td>
+<td align="center">新建项目<span style="background-color: yellow;">workplace</span><img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001210724315.png" alt="image-20211001210724315" style="zoom:50%;"></td>
 <td align="center">相当于</td>
-<td align="center">新建项目<span style="background-color: yellow;">project</span><img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001211244491.png" alt="image-20211001211244491" style="zoom:50%;"></td>
+<td align="center">新建项目<span style="background-color: yellow;">project</span><img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001211244491.png" alt="image-20211001211244491" style="zoom:50%;"></td>
 </tr>
 <tr>
-<td align="center">新建工程<span style="background-color: pink;">project</span><img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001215341911.png" alt="image-20211001215341911" style="zoom:50%;"></td>
+<td align="center">新建工程<span style="background-color: pink;">project</span><img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001215341911.png" alt="image-20211001215341911" style="zoom:50%;"></td>
 <td align="center">相当于</td>
-<td align="center">新建工程<span style="background-color: pink;">module</span><img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001215502196.png" alt="image-20211001215502196" style="zoom:50%;"></td>
+<td align="center">新建工程<span style="background-color: pink;">module</span><img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001215502196.png" alt="image-20211001215502196" style="zoom:50%;"></td>
 </tr>
 </tbody></table>
 <h4 id="2、out文件夹"><a href="#2、out文件夹" class="headerlink" title="2、out文件夹"></a>2、out文件夹</h4><p>新生成的out文件夹是用来存放.java文件编译后的字节码文件</p>
@@ -453,34 +453,34 @@
 </blockquote>
 <h4 id="1、更换主题、字体大小、字体颜色（我觉得原版的还行，就没瞎折腾）"><a href="#1、更换主题、字体大小、字体颜色（我觉得原版的还行，就没瞎折腾）" class="headerlink" title="1、更换主题、字体大小、字体颜色（我觉得原版的还行，就没瞎折腾）"></a>1、更换主题、字体大小、字体颜色（我觉得原版的还行，就没瞎折腾）</h4><p>略</p>
 <h4 id="2、Ctrl-mouse滚轮-来改变字体大小✨"><a href="#2、Ctrl-mouse滚轮-来改变字体大小✨" class="headerlink" title="2、Ctrl + mouse滚轮  来改变字体大小✨"></a>2、Ctrl + mouse滚轮  来改变字体大小✨</h4><p>Setting——Editor——General——（<em>Mouse control</em>）</p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001225914505.png" alt="image-20211001225914505" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001225914505.png" alt="image-20211001225914505" style="zoom:50%;">
 
 
 
 <h4 id="3、自动import所使用的类-接口对应的库类java包-✨"><a href="#3、自动import所使用的类-接口对应的库类java包-✨" class="headerlink" title="3、自动import所使用的类/接口对应的库类java包  ✨"></a>3、自动import所使用的类/接口对应的库类java包  ✨</h4><p>（手动导包快捷键：Alt + Enter）</p>
 <p>Setting——Editor——General——Auto Import——（<em>java</em>）</p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001230009507.png" alt="image-20211001230009507" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001230009507.png" alt="image-20211001230009507" style="zoom:50%;">
 
 <p>延展：关于合并为.*，例<code>java.util.*</code>;</p>
 <p>Setting——Editor——Code Editing——Java——</p>
 <h4 id="4、鼠标悬浮与显示相关documentation"><a href="#4、鼠标悬浮与显示相关documentation" class="headerlink" title="4、鼠标悬浮与显示相关documentation"></a>4、鼠标悬浮与显示相关documentation</h4><p>Setting——Editor——Code Editing——（<em>Quick Documentation</em>）</p>
 <p>默认有</p>
 <h4 id="5、忽略大小写，输入时仍然可以提示可能使用的相关属性✨"><a href="#5、忽略大小写，输入时仍然可以提示可能使用的相关属性✨" class="headerlink" title="5、忽略大小写，输入时仍然可以提示可能使用的相关属性✨"></a>5、忽略大小写，输入时仍然可以提示可能使用的相关属性✨</h4><p>Setting——Editor——General——Code Completion——</p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001224822848.png" alt="image-20211001224822848" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001224822848.png" alt="image-20211001224822848" style="zoom:50%;">
 
 <h4 id="6、项目或者作者基本信息声明文档File-Header✨"><a href="#6、项目或者作者基本信息声明文档File-Header✨" class="headerlink" title="6、项目或者作者基本信息声明文档File Header✨"></a>6、项目或者作者基本信息声明文档File Header✨</h4><p>Setting——Editor——File and Code Templates</p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001232122526.png" alt="image-20211001232122526" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001232122526.png" alt="image-20211001232122526" style="zoom:50%;">
 
 
 
 <h4 id="7、行号"><a href="#7、行号" class="headerlink" title="7、行号"></a>7、行号</h4><p>Setting——Editor——General——Appearance——</p>
 <h4 id="8、文件的Tabs设置为可多行显示"><a href="#8、文件的Tabs设置为可多行显示" class="headerlink" title="8、文件的Tabs设置为可多行显示"></a>8、文件的Tabs设置为可多行显示</h4><p>Setting——Editor——General——Editor Tabs——（<em>Appearance</em>）</p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001225355405.png" alt="image-20211001225355405" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001225355405.png" alt="image-20211001225355405" style="zoom:50%;">
 
 <h4 id="9、设置项目的编码格式为UTF-8模式✨"><a href="#9、设置项目的编码格式为UTF-8模式✨" class="headerlink" title="9、设置项目的编码格式为UTF-8模式✨"></a>9、设置项目的编码格式为UTF-8模式✨</h4><p>Setting——Editor——File Encoding——</p>
 <p>（把所以的Encoding选择为UTF-8即可）</p>
 <h4 id="10、自动编译（更改时与out文件下的字节码文件同步）✨"><a href="#10、自动编译（更改时与out文件下的字节码文件同步）✨" class="headerlink" title="10、自动编译（更改时与out文件下的字节码文件同步）✨"></a>10、自动编译（更改时与out文件下的字节码文件同步）✨</h4><p>Setting——Editor——Built，Execution，Deployment——Compile——</p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001233021804.png" alt="image-20211001233021804" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001233021804.png" alt="image-20211001233021804" style="zoom:50%;">
 
 <h4 id="11、其他"><a href="#11、其他" class="headerlink" title="11、其他"></a>11、其他</h4><p>①分屏操作</p>
 <p>略</p>
@@ -491,7 +491,7 @@
 <p>④重命名</p>
 <p>略</p>
 <h2 id="三、常用快捷键"><a href="#三、常用快捷键" class="headerlink" title="三、常用快捷键"></a>三、常用快捷键</h2><h4 id="1、生成函数代码-构造方法、get-set方法、重写、equals-toString方法-新建文件👍"><a href="#1、生成函数代码-构造方法、get-set方法、重写、equals-toString方法-新建文件👍" class="headerlink" title="1、生成函数代码(构造方法、get/set方法、重写、equals/toString方法)/新建文件👍"></a>1、生成函数代码(构造方法、get/set方法、重写、equals/toString方法)/新建文件👍</h4><p><code>Alt + Insert</code></p>
-<img src="/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001235459319.png" alt="image-20211001235459319" style="zoom:50%;">
+<img src="/hexo_demo/2021/10/09/IDEA%E7%9A%84%E4%BD%BF%E7%94%A8/image-20211001235459319.png" alt="image-20211001235459319" style="zoom:50%;">
 
 <h4 id="2、创建对象自动生成变量-导包🍗"><a href="#2、创建对象自动生成变量-导包🍗" class="headerlink" title="2、创建对象自动生成变量/导包🍗"></a>2、创建对象自动生成变量/导包🍗</h4><p><code>Alt + Enter</code></p>
 <p>例： new int [4]&emsp;&emsp;创建数组对象</p>
@@ -662,7 +662,7 @@
 <p>③升级为个性域名</p>
 <p>1&gt;购买域名: xxx.xx</p>
 <p>1&gt;解析域名</p>
-   <img src="/2021/09/03/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/域名解析.png" alt="域名解析" style="zoom: 67%;">
+   <img src="/hexo_demo/2021/09/03/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/域名解析.png" alt="域名解析" style="zoom: 67%;">
 
 <p>2&gt; ./source/目录下新建<code>文本文档</code>：</p>
 <p>​      CNAME文件  并写入：xxx.xx</p>
@@ -674,7 +674,7 @@
 <p>4&gt;GitHub设置</p>
 <p>​    hexo仓库 —&gt; Settings —&gt; GitHub Pages</p>
 <p>​     然后点击Check it out here进入</p>
-<img src="/2021/09/03/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/pages.png" alt="pages" style="zoom:80%;">
+<img src="/hexo_demo/2021/09/03/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/pages.png" alt="pages" style="zoom:80%;">
 
 <p>​     输入个性域名地址：xxx.xx ，save保存即可</p>
 ]]></content>
@@ -700,7 +700,7 @@
 </blockquote>
 <p>&emsp;&emsp;类似于软件，有不同的版本。一旦当前要开发时出现有问题，要么在仓库中找到前面的版本进行重新开发升级，要么对当前的版本进行修改。</p>
 <p>&emsp;&emsp;仓库就这样，经过一次次的迭代，存放着不同的版本项目。即：<u>仓库以版本为单位进行存储</u>。</p>
-<h3 id="2、自己的远程-本地仓库间联系"><a href="#2、自己的远程-本地仓库间联系" class="headerlink" title="2、自己的远程/本地仓库间联系"></a>2、自己的远程/本地仓库间联系</h3><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png" alt="gq3h0y9rx1" style="zoom:50%;">
+<h3 id="2、自己的远程-本地仓库间联系"><a href="#2、自己的远程-本地仓库间联系" class="headerlink" title="2、自己的远程/本地仓库间联系"></a>2、自己的远程/本地仓库间联系</h3><img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png" alt="gq3h0y9rx1" style="zoom:50%;">
 
 <blockquote>
 <p>Remote：远程仓库（例如：自己的GitHub仓库、码云仓库）</p>
@@ -712,18 +712,18 @@
 <p>index：缓存区（修改后的项目文件进入仓库前都要经过缓存区）</p>
 </blockquote>
 <p>&emsp;&emsp;不同的状态。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916165301754.png" alt="image-20210916165301754" style="zoom:50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916165301754.png" alt="image-20210916165301754" style="zoom:50%;">
 
 <h3 id="2、版本与分支"><a href="#2、版本与分支" class="headerlink" title="2、版本与分支"></a>2、版本与分支</h3><p>&emsp;&emsp;git是什么？——一个分布式<span style="background-color:yellow;">版本</span>控制工具。涉及团队协作时，版本控制显得尤为重要，不同团队负责不同的分支（branch），最终与master分支合并，形成一个项目版本。</p>
 <p>&emsp;&emsp;当然就个人使用来看，基本上一个master分支就可以了。涉及团队协作时，往往设计多个分支（例如：bug修复分支hot_fix、开发者分支dev等等），用Sourcetree可视化客户端比较直观、方便。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/4702b6c46c1a66c09b6a731b840e2f56.png" alt="4702b6c46c1a66c09b6a731b840e2f56" style="zoom:50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/4702b6c46c1a66c09b6a731b840e2f56.png" alt="4702b6c46c1a66c09b6a731b840e2f56" style="zoom:50%;">
 
 <p>&emsp;&emsp;一个节点对应一个版本，一个仓库（项目）可以有多的分支；反正最后是要与master分支合并的。</p>
 <h2 id="二、git的安装与基本命令"><a href="#二、git的安装与基本命令" class="headerlink" title="二、git的安装与基本命令"></a>二、git的安装与基本命令</h2><h3 id="1、git的安装与配置"><a href="#1、git的安装与配置" class="headerlink" title="1、git的安装与配置"></a>1、<a href="https://git-scm.com/">git的安装</a>与配置</h3><blockquote>
 <p>git命令在Git Bash Here命令行中进行😎。</p>
 <p>下面我介绍的git命令对于个人使用完全够了，即：只涉及一个master分支</p>
 </blockquote>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210914223459796.png" alt="image-20210914223459796" style="zoom:50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210914223459796.png" alt="image-20210914223459796" style="zoom:50%;">
 
 <p><strong>配置用户信息：</strong></p>
 <p><code>git config --global user.name &quot;名字&quot;</code></p>
@@ -826,7 +826,7 @@
 <blockquote>
 <p>即： git remote add &lt;仓库a地址别名&gt;  &lt;仓库a的地址&gt;</p>
 </blockquote>
-<h2 id="三、git分支相关命令（团队使用）"><a href="#三、git分支相关命令（团队使用）" class="headerlink" title="三、git分支相关命令（团队使用）"></a>三、git分支相关命令（团队使用）</h2><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/20190112114848032220.png" alt="20190112114848032220" style="zoom:50%;">
+<h2 id="三、git分支相关命令（团队使用）"><a href="#三、git分支相关命令（团队使用）" class="headerlink" title="三、git分支相关命令（团队使用）"></a>三、git分支相关命令（团队使用）</h2><img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/20190112114848032220.png" alt="20190112114848032220" style="zoom:50%;">
 
 <h3 id="1、创建、切换、删除分支"><a href="#1、创建、切换、删除分支" class="headerlink" title="1、创建、切换、删除分支"></a>1、创建、切换、删除分支</h3><p><code>git branch &lt;分支名&gt;</code>       创建本地仓库分支</p>
 <p><code>git checkout &lt;分支名&gt;</code>       切换本地仓库内的分支 【git checkout <strong>orign/master</strong>     切换到远程仓库的master分支】</p>
@@ -849,7 +849,7 @@
 <p><code>git add &lt;conflict_filename&gt;</code></p>
 <p><span style="color:red;">git commit -m &lt;_add a readme file&gt; </span></p>
 <p>&emsp;&emsp; 注意，🐱‍👤这里与前面的commit命令不同，commit命令后不用加文件名</p>
-<h3 id="4、个人所在公司团队间git的远程操作"><a href="#4、个人所在公司团队间git的远程操作" class="headerlink" title="4、个人所在公司团队间git的远程操作"></a>4、个人所在公司团队间git的远程操作</h3><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917101542466.png" alt="image-20210917101542466" style="zoom: 67%;">
+<h3 id="4、个人所在公司团队间git的远程操作"><a href="#4、个人所在公司团队间git的远程操作" class="headerlink" title="4、个人所在公司团队间git的远程操作"></a>4、个人所在公司团队间git的远程操作</h3><img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917101542466.png" alt="image-20210917101542466" style="zoom: 67%;">
 
 <h4 id="1-gt-自己公司成员间的git基本操作"><a href="#1-gt-自己公司成员间的git基本操作" class="headerlink" title="1&gt;自己公司成员间的git基本操作"></a>1&gt;自己公司成员间的git基本操作</h4><p><code>git clone &lt;公司项目的远程仓库地址&gt;</code>         将远程仓库项目克隆一份到自己的本地仓库</p>
 <br>
@@ -862,7 +862,7 @@
 <p>②但团队协作时，如果直接push是不会成功的，因为项目的远程仓库往往不是自己建的 ，所以要想push成功，首先要加入 <strong>项目团队</strong></p>
 </blockquote>
 <h4 id="2-gt-加入项目团队"><a href="#2-gt-加入项目团队" class="headerlink" title="2&gt;加入项目团队"></a>2&gt;加入项目团队</h4><p>&emsp;&emsp;首先需要项目仓库创建者（管理者）让你加入团队，并给你发送了邀请地址</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916224913241.png" alt="image-20210916224913241" style="zoom: 33%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916224913241.png" alt="image-20210916224913241" style="zoom: 33%;">
 
 <p>&emsp;&emsp;然后，自己在GitHub上登陆自己的GitHub账号，在上面的网址栏粘贴<strong>邀请地址</strong>，同意后该项目仓库就会显示在你的GitHub里面。</p>
 <h4 id="3-gt-相对于项目管理者的git命令"><a href="#3-gt-相对于项目管理者的git命令" class="headerlink" title="3&gt;相对于项目管理者的git命令"></a>3&gt;相对于项目管理者的git命令</h4><p>先抓取远程分支的 最新数据到自己的<strong>本地仓库</strong>，但工作区内容仍然没变（<u>并没有和本地仓库合并，还是当前的项目版本</u>）</p>
@@ -876,16 +876,16 @@
 
 <p>最后确定无误后，才将本地仓库与远程仓库合并，工作区内容也相应改变（<u>此时项目合并后数据更新，产生新的项目版本</u>）</p>
 <p><code>git margin origin/master</code></p>
-<h3 id="5、跨公司合作git的相关远程操作"><a href="#5、跨公司合作git的相关远程操作" class="headerlink" title="5、跨公司合作git的相关远程操作"></a>5、跨公司合作git的相关远程操作</h3><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917103905485.png" alt="image-20210917103905485" style="zoom:67%;">
+<h3 id="5、跨公司合作git的相关远程操作"><a href="#5、跨公司合作git的相关远程操作" class="headerlink" title="5、跨公司合作git的相关远程操作"></a>5、跨公司合作git的相关远程操作</h3><img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917103905485.png" alt="image-20210917103905485" style="zoom:67%;">
 
 <p>&emsp;&emsp;合作公司A首先要先得到我们公司项目地址，然后fork项目到他们的GitHub中去。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916230114842.png" alt="image-20210916230114842" style="zoom:50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916230114842.png" alt="image-20210916230114842" style="zoom:50%;">
 
 <p>&emsp;&emsp;然后合作公司A自己进行项目优化，完成优化后pull request给我们的公司审核</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235256298.png" alt="image-20210916235256298" style="zoom: 50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235256298.png" alt="image-20210916235256298" style="zoom: 50%;">
 
 <p>&emsp;&emsp;我们自己的公司通过上图的pull request模块中进行检查、交流后，最后merge pull request通过申请。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235541452.png" alt="image-20210916235541452" style="zoom:50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235541452.png" alt="image-20210916235541452" style="zoom:50%;">
 
 <h2 id="四、ssh免密登录-单个账号"><a href="#四、ssh免密登录-单个账号" class="headerlink" title="四、ssh免密登录(单个账号)"></a>四、ssh免密登录(单个账号)</h2><p>&emsp;&emsp;通过ssh免密操作，当自己将本地仓库push到远程仓库时就不需要密码验证了。</p>
 <h3 id="1、免密登录实现基础"><a href="#1、免密登录实现基础" class="headerlink" title="1、免密登录实现基础"></a>1、免密登录实现基础</h3><h4 id="1-gt-、进入用户主目录"><a href="#1-gt-、进入用户主目录" class="headerlink" title="1&gt;、进入用户主目录"></a>1&gt;、进入用户主目录</h4><p><code>cd ~</code></p>
@@ -901,16 +901,16 @@
 <blockquote>
 <p>通过上面的命令，得到的结果即为 <span style="background-color:yellow;">秘钥内容</span>，复制后输入命令：<code>:wq </code>即可退出</p>
 </blockquote>
-<h4 id="4-gt-、将秘钥内容与GitHub账号相关联"><a href="#4-gt-、将秘钥内容与GitHub账号相关联" class="headerlink" title="4&gt;、将秘钥内容与GitHub账号相关联"></a>4&gt;、将秘钥内容与GitHub账号相关联</h4><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917111533900.png" alt="image-20210917111533900" style="zoom:50%;">
+<h4 id="4-gt-、将秘钥内容与GitHub账号相关联"><a href="#4-gt-、将秘钥内容与GitHub账号相关联" class="headerlink" title="4&gt;、将秘钥内容与GitHub账号相关联"></a>4&gt;、将秘钥内容与GitHub账号相关联</h4><img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917111533900.png" alt="image-20210917111533900" style="zoom:50%;">
 
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917113434860.png" alt="image-20210917113434860" style="zoom: 50%;">
+<img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917113434860.png" alt="image-20210917113434860" style="zoom: 50%;">
 
 <h3 id="2、ssh免密登录方式的使用"><a href="#2、ssh免密登录方式的使用" class="headerlink" title="2、ssh免密登录方式的使用"></a>2、ssh免密登录方式的使用</h3><h4 id="1-gt-、为项目仓库地址添加一个ssh地址别名"><a href="#1-gt-、为项目仓库地址添加一个ssh地址别名" class="headerlink" title="1&gt;、为项目仓库地址添加一个ssh地址别名"></a>1&gt;、为项目仓库地址添加一个ssh地址别名</h4><p><code>git remote add origin_ssh &lt;远程项目仓库的ssh地址&gt;</code></p>
 <p><code>git push origin_ssh master</code></p>
 <blockquote>
 <p>即：git命令和前面的一样，只是涉及origin时，将origin改为origin_ssh即可</p>
 </blockquote>
-<h2 id="五、Sourcetree客户端"><a href="#五、Sourcetree客户端" class="headerlink" title="五、Sourcetree客户端"></a>五、Sourcetree客户端</h2><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210915131512142.png" alt="image-20210915131512142" style="zoom:50%;">
+<h2 id="五、Sourcetree客户端"><a href="#五、Sourcetree客户端" class="headerlink" title="五、Sourcetree客户端"></a>五、Sourcetree客户端</h2><img src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210915131512142.png" alt="image-20210915131512142" style="zoom:50%;">
 
 <blockquote>
 <p>注意：  ①使用分支时，不能有未提交文件的分支。</p>

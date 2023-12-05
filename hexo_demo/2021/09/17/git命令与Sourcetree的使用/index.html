@@ -1,738 +1,1854 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#222" />
+    <meta name="generator" content="Hexo 5.4.0" />
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/hexo_demo/images/apple-touch-icon-next.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/hexo_demo/images/favicon-32x32-next.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/hexo_demo/images/favicon-16x16-next.png"
+    />
+    <link rel="mask-icon" href="/hexo_demo/images/logo.svg" color="#222" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <link rel="stylesheet" href="/hexo_demo/css/main.css" />
 
-<link rel="stylesheet" href="/css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+      integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css"
+      integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"
+      integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0="
+      crossorigin="anonymous"
+    ></script>
 
+    <script class="next-config" data-name="main" type="application/json">
+      {
+        "hostname": "lencamo.cn",
+        "root": "/hexo_demo",
+        "images": "/hexo_demo/images",
+        "scheme": "Gemini",
+        "version": "8.7.0",
+        "exturl": false,
+        "sidebar": { "position": "left", "display": "post", "padding": 18, "offset": 12 },
+        "copycode": true,
+        "bookmark": { "enable": false, "color": "#222", "save": "auto" },
+        "mediumzoom": false,
+        "lazyload": false,
+        "pangu": false,
+        "comments": {
+          "style": "tabs",
+          "active": null,
+          "storage": true,
+          "lazyload": false,
+          "nav": null
+        },
+        "motion": {
+          "enable": true,
+          "async": false,
+          "transition": {
+            "post_block": "fadeIn",
+            "post_header": "fadeInDown",
+            "post_body": "fadeInDown",
+            "coll_header": "fadeInLeft",
+            "sidebar": "fadeInUp"
+          }
+        },
+        "prism": false,
+        "i18n": {
+          "placeholder": "搜索...",
+          "empty": "没有找到任何搜索结果：${query}",
+          "hits_time": "找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",
+          "hits": "找到 ${hits} 个搜索结果"
+        },
+        "path": "/search.xml",
+        "localsearch": {
+          "enable": true,
+          "trigger": "auto",
+          "top_n_per_article": 1,
+          "unescape": false,
+          "preload": false
+        }
+      }
+    </script>
+    <script src="/hexo_demo/js/config.js"></script>
+    <meta
+      name="description"
+      content="&amp;emsp;&amp;emsp;很早之前就听说做为一个程序员会使用git是非常重要的，于是乎在我在早前就接触并学习了git。  其实早期我接触git，纯粹是为了弄一个所谓的github云笔记，也就是草草了事了😂。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="git命令与Sourcetree的使用" />
+    <meta
+      property="og:url"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/index.html"
+    />
+    <meta property="og:site_name" content="Lencamo" />
+    <meta
+      property="og:description"
+      content="&amp;emsp;&amp;emsp;很早之前就听说做为一个程序员会使用git是非常重要的，于是乎在我在早前就接触并学习了git。  其实早期我接触git，纯粹是为了弄一个所谓的github云笔记，也就是草草了事了😂。"
+    />
+    <meta property="og:locale" content="zh_CN" />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916165301754.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/4702b6c46c1a66c09b6a731b840e2f56.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210914223459796.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/20190112114848032220.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917101542466.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916224913241.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917103905485.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916230114842.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235256298.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235541452.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917111533900.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917113434860.png"
+    />
+    <meta
+      property="og:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210915131512142.png"
+    />
+    <meta property="article:published_time" content="2021-09-17T04:50:13.000Z" />
+    <meta property="article:modified_time" content="2021-09-28T14:32:09.587Z" />
+    <meta property="article:author" content="Lencamo" />
+    <meta property="article:tag" content="git与GitHub" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:image"
+      content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png"
+    />
 
+    <link
+      rel="canonical"
+      href="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/"
+    />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+    <script class="next-config" data-name="page" type="application/json">
+      {
+        "sidebar": "",
+        "isHome": false,
+        "isPost": true,
+        "lang": "zh-CN",
+        "comments": true,
+        "permalink": "https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/",
+        "path": "2021/09/17/git命令与Sourcetree的使用/",
+        "title": "git命令与Sourcetree的使用"
+      }
+    </script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lencamo.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="&amp;emsp;&amp;emsp;很早之前就听说做为一个程序员会使用git是非常重要的，于是乎在我在早前就接触并学习了git。  其实早期我接触git，纯粹是为了弄一个所谓的github云笔记，也就是草草了事了😂。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git命令与Sourcetree的使用">
-<meta property="og:url" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
-<meta property="og:site_name" content="Lencamo">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;很早之前就听说做为一个程序员会使用git是非常重要的，于是乎在我在早前就接触并学习了git。  其实早期我接触git，纯粹是为了弄一个所谓的github云笔记，也就是草草了事了😂。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916165301754.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/4702b6c46c1a66c09b6a731b840e2f56.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210914223459796.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/20190112114848032220.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917101542466.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916224913241.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917103905485.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916230114842.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235256298.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235541452.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917111533900.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917113434860.png">
-<meta property="og:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210915131512142.png">
-<meta property="article:published_time" content="2021-09-17T04:50:13.000Z">
-<meta property="article:modified_time" content="2021-09-28T14:32:09.587Z">
-<meta property="article:author" content="Lencamo">
-<meta property="article:tag" content="git与GitHub">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png">
+    <script class="next-config" data-name="calendar" type="application/json">
+      ""
+    </script>
+    <title>git命令与Sourcetree的使用 | Lencamo</title>
 
+    <noscript>
+      <link rel="stylesheet" href="/hexo_demo/css/noscript.css" />
+    </noscript>
+  </head>
 
-<link rel="canonical" href="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/">
+  <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+    <div class="headband"></div>
 
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner">
+          <div class="site-brand-container">
+            <div class="site-nav-toggle">
+              <div class="toggle" aria-label="切换导航栏" role="button">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+              </div>
+            </div>
 
+            <div class="site-meta">
+              <a href="/" class="brand" rel="start">
+                <i class="logo-line"></i>
+                <h1 class="site-title">Lencamo</h1>
+                <i class="logo-line"></i>
+              </a>
+              <p class="site-subtitle" itemprop="description">记录学习的点点滴滴</p>
+            </div>
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/","path":"2021/09/17/git命令与Sourcetree的使用/","title":"git命令与Sourcetree的使用"}</script>
+            <div class="site-nav-right">
+              <div class="toggle popup-trigger">
+                <i class="fa fa-search fa-fw fa-lg"></i>
+              </div>
+            </div>
+          </div>
 
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>git命令与Sourcetree的使用 | Lencamo</title>
-  
+          <nav class="site-nav">
+            <ul class="main-menu menu">
+              <li class="menu-item menu-item-home">
+                <a href="/hexo_demo" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+              </li>
+              <li class="menu-item menu-item-categories">
+                <a href="/hexo_demo/categories/" rel="section"
+                  ><i class="fa fa-th fa-fw"></i>分类</a
+                >
+              </li>
+              <li class="menu-item menu-item-resources">
+                <a href="/hexo_demo/Resources/" rel="section"
+                  ><i class="fa fa-book fa-fw"></i>Resources</a
+                >
+              </li>
+              <li class="menu-item menu-item-about">
+                <a href="/hexo_demo/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+              </li>
+              <li class="menu-item menu-item-links">
+                <a href="/hexo_demo/links/" rel="section"><i class="fa fa-link fa-fw"></i>博友集</a>
+              </li>
+              <li class="menu-item menu-item-archives">
+                <a href="/hexo_demo/archives/" rel="section"
+                  ><i class="fa fa-archive fa-fw"></i>归档</a
+                >
+              </li>
+              <li class="menu-item menu-item-tags">
+                <a href="/hexo_demo/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+              </li>
+              <li class="menu-item menu-item-search">
+                <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索 </a>
+              </li>
+            </ul>
+          </nav>
 
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">Lencamo</h1>
-      <i class="logo-line"></i>
-    </a>
-      <p class="site-subtitle" itemprop="description">记录学习的点点滴滴</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-resources"><a href="/Resources/" rel="section"><i class="fa fa-book fa-fw"></i>Resources</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>博友集</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-        
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%93%E5%BA%93%E4%B8%8E%E7%89%88%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">一、仓库与版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BB%93%E5%BA%93%E2%80%94%E2%80%94%EF%BC%88%E7%89%B9%E6%AE%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">1、仓库——（特殊的文件夹）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B-%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E9%97%B4%E8%81%94%E7%B3%BB"><span class="nav-number">1.2.</span> <span class="nav-text">2、自己的远程&#x2F;本地仓库间联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E7%89%88%E6%9C%AC%E4%B8%8E%E5%88%86%E6%94%AF"><span class="nav-number">1.3.</span> <span class="nav-text">2、版本与分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">二、git的安装与基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">1、git的安装与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81git%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">2、git的基础命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81git%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8-%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">三、git的常用命令（个人使用:）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81git%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C"><span class="nav-number">3.1.</span> <span class="nav-text">1、git的本地操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-%E3%80%81%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="nav-number">3.1.1.</span> <span class="nav-text">1&gt;、创建本地仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-%E3%80%81%E6%8F%90%E4%BA%A4%E5%B7%A5%E4%BD%9C%E5%8C%BA%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.2.</span> <span class="nav-text">2&gt;、提交工作区文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-%E3%80%81%E6%92%A4%E5%9B%9E%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%EF%BC%88%E5%8F%AF%E7%BB%A7%E7%BB%AD%E7%BC%96%E8%BE%91%EF%BC%89"><span class="nav-number">3.1.3.</span> <span class="nav-text">3&gt;、撤回项目文件（可继续编辑）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-gt-%E3%80%81%E6%AF%94%E8%BE%83%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%89%8D%E5%90%8E%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.1.4.</span> <span class="nav-text">4&gt;、比较项目文件修改前后的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-gt-%E3%80%81%E5%88%A0%E9%99%A4%E5%B7%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.5.</span> <span class="nav-text">4&gt;、删除已提交的项目文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-gt-%E3%80%81%E5%9B%9E%E5%88%B0%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC-%E6%89%BE%E5%9B%9E%E5%B7%B2%E5%88%A0%E9%99%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%EF%BC%88%E4%BF%97%E7%A7%B0%E5%9B%9E%E6%BB%9A%EF%BC%89"><span class="nav-number">3.1.6.</span> <span class="nav-text">5&gt;、回到历史版本&#x2F;找回已删除的项目文件（俗称回滚）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81git%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">3.2.</span> <span class="nav-text">2、git的远程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-%E3%80%81%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E9%97%B4%E7%9A%84%E5%85%8B%E9%9A%86"><span class="nav-number">3.2.1.</span> <span class="nav-text">1&gt;、本地仓库与远程仓库间的克隆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-%E3%80%81%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%B7%B2%E5%88%9B%E5%BB%BA%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%88GitHub%E4%BB%93%E5%BA%93%EF%BC%89%E5%9C%B0%E5%9D%80%E5%8F%96%E5%88%AB%E5%90%8D"><span class="nav-number">3.2.2.</span> <span class="nav-text">2&gt;、为自己已创建的远程仓库（GitHub仓库）地址取别名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-%E3%80%81%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.3.</span> <span class="nav-text">3&gt;、将本地仓库推送到自己的远程仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81git%E5%88%86%E6%94%AF%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%EF%BC%88%E5%9B%A2%E9%98%9F%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">三、git分支相关命令（团队使用）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E3%80%81%E5%88%87%E6%8D%A2%E3%80%81%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-number">4.1.</span> <span class="nav-text">1、创建、切换、删除分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="nav-number">4.2.</span> <span class="nav-text">2、合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="nav-number">4.3.</span> <span class="nav-text">3、合并冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E4%B8%AA%E4%BA%BA%E6%89%80%E5%9C%A8%E5%85%AC%E5%8F%B8%E5%9B%A2%E9%98%9F%E9%97%B4git%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">4.4.</span> <span class="nav-text">4、个人所在公司团队间git的远程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-%E8%87%AA%E5%B7%B1%E5%85%AC%E5%8F%B8%E6%88%90%E5%91%98%E9%97%B4%E7%9A%84git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">4.4.1.</span> <span class="nav-text">1&gt;自己公司成员间的git基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-%E5%8A%A0%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%9B%A2%E9%98%9F"><span class="nav-number">4.4.2.</span> <span class="nav-text">2&gt;加入项目团队</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-%E7%9B%B8%E5%AF%B9%E4%BA%8E%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%80%85%E7%9A%84git%E5%91%BD%E4%BB%A4"><span class="nav-number">4.4.3.</span> <span class="nav-text">3&gt;相对于项目管理者的git命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E8%B7%A8%E5%85%AC%E5%8F%B8%E5%90%88%E4%BD%9Cgit%E7%9A%84%E7%9B%B8%E5%85%B3%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">4.5.</span> <span class="nav-text">5、跨公司合作git的相关远程操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95-%E5%8D%95%E4%B8%AA%E8%B4%A6%E5%8F%B7"><span class="nav-number">5.</span> <span class="nav-text">四、ssh免密登录(单个账号)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E5%AE%9E%E7%8E%B0%E5%9F%BA%E7%A1%80"><span class="nav-number">5.1.</span> <span class="nav-text">1、免密登录实现基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-%E3%80%81%E8%BF%9B%E5%85%A5%E7%94%A8%E6%88%B7%E4%B8%BB%E7%9B%AE%E5%BD%95"><span class="nav-number">5.1.1.</span> <span class="nav-text">1&gt;、进入用户主目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-%E3%80%81%E9%80%9A%E8%BF%87%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E5%8D%B3%E5%8F%AF%E5%9C%A8%E7%94%A8pwd%E5%91%BD%E4%BB%A4%E5%BE%97%E5%88%B0%E7%9A%84%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA-ssh%E6%96%87%E4%BB%B6"><span class="nav-number">5.1.2.</span> <span class="nav-text">2&gt;、通过下面的命令即可在用pwd命令得到的目录下建立一个.ssh文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-%E3%80%81%E5%A4%8D%E5%88%B6id-rsa-pub%E6%96%87%E4%BB%B6%E9%87%8C%E7%9A%84%E5%85%A8%E9%83%A8%E7%A7%98%E9%92%A5%E5%86%85%E5%AE%B9"><span class="nav-number">5.1.3.</span> <span class="nav-text">3&gt;、复制id_rsa.pub文件里的全部秘钥内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-gt-%E3%80%81%E5%B0%86%E7%A7%98%E9%92%A5%E5%86%85%E5%AE%B9%E4%B8%8EGitHub%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3%E8%81%94"><span class="nav-number">5.1.4.</span> <span class="nav-text">4&gt;、将秘钥内容与GitHub账号相关联</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E6%96%B9%E5%BC%8F%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">5.2.</span> <span class="nav-text">2、ssh免密登录方式的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-%E3%80%81%E4%B8%BA%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AAssh%E5%9C%B0%E5%9D%80%E5%88%AB%E5%90%8D"><span class="nav-number">5.2.1.</span> <span class="nav-text">1&gt;、为项目仓库地址添加一个ssh地址别名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81Sourcetree%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">6.</span> <span class="nav-text">五、Sourcetree客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E9%87%8D%E7%BD%AE%E5%88%B0%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF%E5%88%B0%E6%AD%A4%E6%AC%A1%E6%8F%90%E4%BA%A4"><span class="nav-number">6.1.</span> <span class="nav-text">1、重置到当前分支到此次提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%9B%9E%E6%BB%9A%E6%8F%90%E4%BA%A4"><span class="nav-number">6.2.</span> <span class="nav-text">2、回滚提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC"><span class="nav-number">6.3.</span> <span class="nav-text">3、查看历史版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E5%88%86%E6%94%AF"><span class="nav-number">6.4.</span> <span class="nav-text">4、修改历史版本并创建新的分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%F0%9F%92%96"><span class="nav-number">6.5.</span> <span class="nav-text">5、分支合并💖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81%F0%9F%A4%94"><span class="nav-number">6.6.</span> <span class="nav-text">6、合并冲突🤔</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%8F%8B%E6%83%85%E6%8F%90%E7%A4%BA%EF%BC%9A"><span class="nav-number">7.</span> <span class="nav-text">五、友情提示：</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Lencamo"
-      src="/images/avatar.gif">
-  <p class="site-author-name" itemprop="name">Lencamo</p>
-  <div class="site-description" itemprop="description">东隅已逝，桑榆非晚</div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">8</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Lencamo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Lencamo" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/207141481@qq.com" title="E-Mail → 207141481@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-  <div class="cc-license site-overview-item animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
-  </div>
-
-
-  <div class="links-of-blogroll site-overview-item animated">
-    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-      友链
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://leetcode-cn.com/" title="https:&#x2F;&#x2F;leetcode-cn.com&#x2F;" rel="noopener" target="_blank">LeetCode</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.runoob.com/" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;" rel="noopener" target="_blank">菜鸟教程</a>
-        </li>
-    </ul>
-  </div>
-
+          <div class="search-pop-overlay">
+            <div class="popup search-popup">
+              <div class="search-header">
+                <span class="search-icon">
+                  <i class="fa fa-search"></i>
+                </span>
+                <div class="search-input-container">
+                  <input
+                    autocomplete="off"
+                    autocapitalize="off"
+                    maxlength="80"
+                    placeholder="搜索..."
+                    spellcheck="false"
+                    type="search"
+                    class="search-input"
+                  />
+                </div>
+                <span class="popup-btn-close" role="button">
+                  <i class="fa fa-times-circle"></i>
+                </span>
+              </div>
+              <div class="search-result-container no-result">
+                <div class="search-result-icon">
+                  <i class="fa fa-spinner fa-pulse fa-5x"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
 
-
-    </header>
-
-    
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/Lencamo" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Lencamo">
-      <meta itemprop="description" content="东隅已逝，桑榆非晚">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lencamo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          git命令与Sourcetree的使用
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-17 12:50:13" itemprop="dateCreated datePublished" datetime="2021-09-17T12:50:13+08:00">2021-09-17</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-28 22:32:09" itemprop="dateModified" datetime="2021-09-28T22:32:09+08:00">2021-09-28</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>6.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
-    </span>
-</div>
-
+        <div class="toggle sidebar-toggle" role="button">
+          <span class="toggle-line"></span>
+          <span class="toggle-line"></span>
+          <span class="toggle-line"></span>
         </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+            <ul class="sidebar-nav">
+              <li class="sidebar-nav-toc">文章目录</li>
+              <li class="sidebar-nav-overview">站点概览</li>
+            </ul>
+
+            <div class="sidebar-panel-container">
+              <!--noindex-->
+              <div class="post-toc-wrap sidebar-panel">
+                <div class="post-toc animated">
+                  <ol class="nav">
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E4%B8%80%E3%80%81%E4%BB%93%E5%BA%93%E4%B8%8E%E7%89%88%E6%9C%AC"
+                        ><span class="nav-number">1.</span>
+                        <span class="nav-text">一、仓库与版本</span></a
+                      >
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#1%E3%80%81%E4%BB%93%E5%BA%93%E2%80%94%E2%80%94%EF%BC%88%E7%89%B9%E6%AE%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%89"
+                            ><span class="nav-number">1.1.</span>
+                            <span class="nav-text">1、仓库——（特殊的文件夹）</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#2%E3%80%81%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B-%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E9%97%B4%E8%81%94%E7%B3%BB"
+                            ><span class="nav-number">1.2.</span>
+                            <span class="nav-text">2、自己的远程&#x2F;本地仓库间联系</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#2%E3%80%81%E7%89%88%E6%9C%AC%E4%B8%8E%E5%88%86%E6%94%AF"
+                            ><span class="nav-number">1.3.</span>
+                            <span class="nav-text">2、版本与分支</span></a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E4%BA%8C%E3%80%81git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"
+                        ><span class="nav-number">2.</span>
+                        <span class="nav-text">二、git的安装与基本命令</span></a
+                      >
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#1%E3%80%81git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"
+                            ><span class="nav-number">2.1.</span>
+                            <span class="nav-text">1、git的安装与配置</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#2%E3%80%81git%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"
+                            ><span class="nav-number">2.2.</span>
+                            <span class="nav-text">2、git的基础命令</span></a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E4%B8%89%E3%80%81git%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8-%EF%BC%89"
+                        ><span class="nav-number">3.</span>
+                        <span class="nav-text">三、git的常用命令（个人使用:）</span></a
+                      >
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#1%E3%80%81git%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C"
+                            ><span class="nav-number">3.1.</span>
+                            <span class="nav-text">1、git的本地操作</span></a
+                          >
+                          <ol class="nav-child">
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#1-gt-%E3%80%81%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"
+                                ><span class="nav-number">3.1.1.</span>
+                                <span class="nav-text">1&gt;、创建本地仓库</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#2-gt-%E3%80%81%E6%8F%90%E4%BA%A4%E5%B7%A5%E4%BD%9C%E5%8C%BA%E6%96%87%E4%BB%B6"
+                                ><span class="nav-number">3.1.2.</span>
+                                <span class="nav-text">2&gt;、提交工作区文件</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#3-gt-%E3%80%81%E6%92%A4%E5%9B%9E%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%EF%BC%88%E5%8F%AF%E7%BB%A7%E7%BB%AD%E7%BC%96%E8%BE%91%EF%BC%89"
+                                ><span class="nav-number">3.1.3.</span>
+                                <span class="nav-text">3&gt;、撤回项目文件（可继续编辑）</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#4-gt-%E3%80%81%E6%AF%94%E8%BE%83%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%89%8D%E5%90%8E%E7%9A%84%E5%8C%BA%E5%88%AB"
+                                ><span class="nav-number">3.1.4.</span>
+                                <span class="nav-text">4&gt;、比较项目文件修改前后的区别</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#4-gt-%E3%80%81%E5%88%A0%E9%99%A4%E5%B7%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6"
+                                ><span class="nav-number">3.1.5.</span>
+                                <span class="nav-text">4&gt;、删除已提交的项目文件</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#5-gt-%E3%80%81%E5%9B%9E%E5%88%B0%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC-%E6%89%BE%E5%9B%9E%E5%B7%B2%E5%88%A0%E9%99%A4%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%EF%BC%88%E4%BF%97%E7%A7%B0%E5%9B%9E%E6%BB%9A%EF%BC%89"
+                                ><span class="nav-number">3.1.6.</span>
+                                <span class="nav-text"
+                                  >5&gt;、回到历史版本&#x2F;找回已删除的项目文件（俗称回滚）</span
+                                ></a
+                              >
+                            </li>
+                          </ol>
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#2%E3%80%81git%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"
+                            ><span class="nav-number">3.2.</span>
+                            <span class="nav-text">2、git的远程操作</span></a
+                          >
+                          <ol class="nav-child">
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#1-gt-%E3%80%81%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E9%97%B4%E7%9A%84%E5%85%8B%E9%9A%86"
+                                ><span class="nav-number">3.2.1.</span>
+                                <span class="nav-text">1&gt;、本地仓库与远程仓库间的克隆</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#2-gt-%E3%80%81%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%B7%B2%E5%88%9B%E5%BB%BA%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%88GitHub%E4%BB%93%E5%BA%93%EF%BC%89%E5%9C%B0%E5%9D%80%E5%8F%96%E5%88%AB%E5%90%8D"
+                                ><span class="nav-number">3.2.2.</span>
+                                <span class="nav-text"
+                                  >2&gt;、为自己已创建的远程仓库（GitHub仓库）地址取别名</span
+                                ></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#3-gt-%E3%80%81%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"
+                                ><span class="nav-number">3.2.3.</span>
+                                <span class="nav-text"
+                                  >3&gt;、将本地仓库推送到自己的远程仓库</span
+                                ></a
+                              >
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E4%B8%89%E3%80%81git%E5%88%86%E6%94%AF%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%EF%BC%88%E5%9B%A2%E9%98%9F%E4%BD%BF%E7%94%A8%EF%BC%89"
+                        ><span class="nav-number">4.</span>
+                        <span class="nav-text">三、git分支相关命令（团队使用）</span></a
+                      >
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E3%80%81%E5%88%87%E6%8D%A2%E3%80%81%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"
+                            ><span class="nav-number">4.1.</span>
+                            <span class="nav-text">1、创建、切换、删除分支</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a class="nav-link" href="#2%E3%80%81%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"
+                            ><span class="nav-number">4.2.</span>
+                            <span class="nav-text">2、合并分支</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a class="nav-link" href="#3%E3%80%81%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"
+                            ><span class="nav-number">4.3.</span>
+                            <span class="nav-text">3、合并冲突</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#4%E3%80%81%E4%B8%AA%E4%BA%BA%E6%89%80%E5%9C%A8%E5%85%AC%E5%8F%B8%E5%9B%A2%E9%98%9F%E9%97%B4git%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"
+                            ><span class="nav-number">4.4.</span>
+                            <span class="nav-text">4、个人所在公司团队间git的远程操作</span></a
+                          >
+                          <ol class="nav-child">
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#1-gt-%E8%87%AA%E5%B7%B1%E5%85%AC%E5%8F%B8%E6%88%90%E5%91%98%E9%97%B4%E7%9A%84git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"
+                                ><span class="nav-number">4.4.1.</span>
+                                <span class="nav-text">1&gt;自己公司成员间的git基本操作</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#2-gt-%E5%8A%A0%E5%85%A5%E9%A1%B9%E7%9B%AE%E5%9B%A2%E9%98%9F"
+                                ><span class="nav-number">4.4.2.</span>
+                                <span class="nav-text">2&gt;加入项目团队</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#3-gt-%E7%9B%B8%E5%AF%B9%E4%BA%8E%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%80%85%E7%9A%84git%E5%91%BD%E4%BB%A4"
+                                ><span class="nav-number">4.4.3.</span>
+                                <span class="nav-text">3&gt;相对于项目管理者的git命令</span></a
+                              >
+                            </li>
+                          </ol>
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#5%E3%80%81%E8%B7%A8%E5%85%AC%E5%8F%B8%E5%90%88%E4%BD%9Cgit%E7%9A%84%E7%9B%B8%E5%85%B3%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"
+                            ><span class="nav-number">4.5.</span>
+                            <span class="nav-text">5、跨公司合作git的相关远程操作</span></a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E5%9B%9B%E3%80%81ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95-%E5%8D%95%E4%B8%AA%E8%B4%A6%E5%8F%B7"
+                        ><span class="nav-number">5.</span>
+                        <span class="nav-text">四、ssh免密登录(单个账号)</span></a
+                      >
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#1%E3%80%81%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E5%AE%9E%E7%8E%B0%E5%9F%BA%E7%A1%80"
+                            ><span class="nav-number">5.1.</span>
+                            <span class="nav-text">1、免密登录实现基础</span></a
+                          >
+                          <ol class="nav-child">
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#1-gt-%E3%80%81%E8%BF%9B%E5%85%A5%E7%94%A8%E6%88%B7%E4%B8%BB%E7%9B%AE%E5%BD%95"
+                                ><span class="nav-number">5.1.1.</span>
+                                <span class="nav-text">1&gt;、进入用户主目录</span></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#2-gt-%E3%80%81%E9%80%9A%E8%BF%87%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E5%8D%B3%E5%8F%AF%E5%9C%A8%E7%94%A8pwd%E5%91%BD%E4%BB%A4%E5%BE%97%E5%88%B0%E7%9A%84%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA-ssh%E6%96%87%E4%BB%B6"
+                                ><span class="nav-number">5.1.2.</span>
+                                <span class="nav-text"
+                                  >2&gt;、通过下面的命令即可在用pwd命令得到的目录下建立一个.ssh文件</span
+                                ></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#3-gt-%E3%80%81%E5%A4%8D%E5%88%B6id-rsa-pub%E6%96%87%E4%BB%B6%E9%87%8C%E7%9A%84%E5%85%A8%E9%83%A8%E7%A7%98%E9%92%A5%E5%86%85%E5%AE%B9"
+                                ><span class="nav-number">5.1.3.</span>
+                                <span class="nav-text"
+                                  >3&gt;、复制id_rsa.pub文件里的全部秘钥内容</span
+                                ></a
+                              >
+                            </li>
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#4-gt-%E3%80%81%E5%B0%86%E7%A7%98%E9%92%A5%E5%86%85%E5%AE%B9%E4%B8%8EGitHub%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3%E8%81%94"
+                                ><span class="nav-number">5.1.4.</span>
+                                <span class="nav-text">4&gt;、将秘钥内容与GitHub账号相关联</span></a
+                              >
+                            </li>
+                          </ol>
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#2%E3%80%81ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E6%96%B9%E5%BC%8F%E7%9A%84%E4%BD%BF%E7%94%A8"
+                            ><span class="nav-number">5.2.</span>
+                            <span class="nav-text">2、ssh免密登录方式的使用</span></a
+                          >
+                          <ol class="nav-child">
+                            <li class="nav-item nav-level-4">
+                              <a
+                                class="nav-link"
+                                href="#1-gt-%E3%80%81%E4%B8%BA%E9%A1%B9%E7%9B%AE%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AAssh%E5%9C%B0%E5%9D%80%E5%88%AB%E5%90%8D"
+                                ><span class="nav-number">5.2.1.</span>
+                                <span class="nav-text"
+                                  >1&gt;、为项目仓库地址添加一个ssh地址别名</span
+                                ></a
+                              >
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E4%BA%94%E3%80%81Sourcetree%E5%AE%A2%E6%88%B7%E7%AB%AF"
+                        ><span class="nav-number">6.</span>
+                        <span class="nav-text">五、Sourcetree客户端</span></a
+                      >
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#1%E3%80%81%E9%87%8D%E7%BD%AE%E5%88%B0%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF%E5%88%B0%E6%AD%A4%E6%AC%A1%E6%8F%90%E4%BA%A4"
+                            ><span class="nav-number">6.1.</span>
+                            <span class="nav-text">1、重置到当前分支到此次提交</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a class="nav-link" href="#2%E3%80%81%E5%9B%9E%E6%BB%9A%E6%8F%90%E4%BA%A4"
+                            ><span class="nav-number">6.2.</span>
+                            <span class="nav-text">2、回滚提交</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#3%E3%80%81%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC"
+                            ><span class="nav-number">6.3.</span>
+                            <span class="nav-text">3、查看历史版本</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#4%E3%80%81%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E5%88%86%E6%94%AF"
+                            ><span class="nav-number">6.4.</span>
+                            <span class="nav-text">4、修改历史版本并创建新的分支</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#5%E3%80%81%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%F0%9F%92%96"
+                            ><span class="nav-number">6.5.</span>
+                            <span class="nav-text">5、分支合并💖</span></a
+                          >
+                        </li>
+                        <li class="nav-item nav-level-3">
+                          <a
+                            class="nav-link"
+                            href="#6%E3%80%81%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81%F0%9F%A4%94"
+                            ><span class="nav-number">6.6.</span>
+                            <span class="nav-text">6、合并冲突🤔</span></a
+                          >
+                        </li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-2">
+                      <a
+                        class="nav-link"
+                        href="#%E4%BA%94%E3%80%81%E5%8F%8B%E6%83%85%E6%8F%90%E7%A4%BA%EF%BC%9A"
+                        ><span class="nav-number">7.</span>
+                        <span class="nav-text">五、友情提示：</span></a
+                      >
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--/noindex-->
+
+              <div class="site-overview-wrap sidebar-panel">
+                <div class="site-overview">
+                  <div
+                    class="site-author site-overview-item animated"
+                    itemprop="author"
+                    itemscope
+                    itemtype="http://schema.org/Person"
+                  >
+                    <img
+                      class="site-author-image"
+                      itemprop="image"
+                      alt="Lencamo"
+                      src="/hexo_demo/images/avatar.gif"
+                    />
+                    <p class="site-author-name" itemprop="name">Lencamo</p>
+                    <div class="site-description" itemprop="description">东隅已逝，桑榆非晚</div>
+                  </div>
+                  <div class="site-state-wrap site-overview-item animated">
+                    <nav class="site-state">
+                      <div class="site-state-item site-state-posts">
+                        <a href="/hexo_demo/archives/">
+                          <span class="site-state-item-count">8</span>
+                          <span class="site-state-item-name">日志</span>
+                        </a>
+                      </div>
+                      <div class="site-state-item site-state-categories">
+                        <a href="/hexo_demo/categories/">
+                          <span class="site-state-item-count">3</span>
+                          <span class="site-state-item-name">分类</span></a
+                        >
+                      </div>
+                      <div class="site-state-item site-state-tags">
+                        <a href="/hexo_demo/tags/">
+                          <span class="site-state-item-count">6</span>
+                          <span class="site-state-item-name">标签</span></a
+                        >
+                      </div>
+                    </nav>
+                  </div>
+                  <div class="links-of-author site-overview-item animated">
+                    <span class="links-of-author-item">
+                      <a
+                        href="https://github.com/Lencamo"
+                        title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Lencamo"
+                        rel="noopener"
+                        target="_blank"
+                        ><i class="fab fa-github fa-fw"></i>GitHub</a
+                      >
+                    </span>
+                    <span class="links-of-author-item">
+                      <a href="/207141481@qq.com" title="E-Mail → 207141481@qq.com"
+                        ><i class="fa fa-envelope fa-fw"></i>E-Mail</a
+                      >
+                    </span>
+                  </div>
+                  <div class="cc-license site-overview-item animated" itemprop="license">
+                    <a
+                      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                      class="cc-opacity"
+                      rel="noopener"
+                      target="_blank"
+                      ><img
+                        src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg"
+                        alt="Creative Commons"
+                    /></a>
+                  </div>
+
+                  <div class="links-of-blogroll site-overview-item animated">
+                    <div class="links-of-blogroll-title">
+                      <i class="fa fa-globe fa-fw"></i>
+                      友链
+                    </div>
+                    <ul class="links-of-blogroll-list">
+                      <li class="links-of-blogroll-item">
+                        <a
+                          href="https://leetcode-cn.com/"
+                          title="https:&#x2F;&#x2F;leetcode-cn.com&#x2F;"
+                          rel="noopener"
+                          target="_blank"
+                          >LeetCode</a
+                        >
+                      </li>
+                      <li class="links-of-blogroll-item">
+                        <a
+                          href="https://www.runoob.com/"
+                          title="https:&#x2F;&#x2F;www.runoob.com&#x2F;"
+                          rel="noopener"
+                          target="_blank"
+                          >菜鸟教程</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="sidebar-dimmer"></div>
       </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>&emsp;&emsp;很早之前就听说做为一个程序员会使用git是非常重要的，于是乎在我在早前就接触并学习了git。</p>
-<blockquote>
-<p>其实早期我接触git，纯粹是为了弄一个所谓的github云笔记，也就是草草了事了😂。</p>
-<span id="more"></span>
+      <div class="back-to-top" role="button" aria-label="返回顶部">
+        <i class="fa fa-arrow-up"></i>
+        <span>0%</span>
+      </div>
+      <div class="reading-progress-bar"></div>
 
-<p>随着个人hexo博客的搭建，以及个人前端小项目的产生，让我对全面学习git的好奇心只增不减（虽然我的小项目根本几乎没有所谓的版本，发布后几乎没怎么改）。</p>
-</blockquote>
-<p>&emsp;&emsp;下面，我来简单介绍一下我对git的一些认知。涉及团队合作啥的复杂git命令我还在建议学习一下git的可视化客户端工具<span style="background-color:yellow;">Sourcetree</span>（我的前车之鉴😭，没必要用git命令来<code>装逼</code>)。</p>
-<h2 id="一、仓库与版本"><a href="#一、仓库与版本" class="headerlink" title="一、仓库与版本"></a>一、仓库与版本</h2><p>&emsp;&emsp;一个项目的完成，往往会产生很多的版本，而伴随着新版本的产生，项目会变得趋于完善。</p>
-<h3 id="1、仓库——（特殊的文件夹）"><a href="#1、仓库——（特殊的文件夹）" class="headerlink" title="1、仓库——（特殊的文件夹）"></a>1、仓库——（特殊的文件夹）</h3><p>&emsp;&emsp;个人理解，<u>仓库可以想象成一个<strong>特殊的文件夹</strong></u>，不同的是它可以通过git命令查看自己以前的版本项目。</p>
-<blockquote>
-<p>想一想，自己电脑上的文件夹，要么保存修改，要么舍弃，只能二选一；而如果把它搞成一个仓库文件夹，就不用担心这样的事情了，即使你保存了修改，任然可以通过git命令查看修改之前的版本内容。</p>
-</blockquote>
-<p>&emsp;&emsp;类似于软件，有不同的版本。一旦当前要开发时出现有问题，要么在仓库中找到前面的版本进行重新开发升级，要么对当前的版本进行修改。</p>
-<p>&emsp;&emsp;仓库就这样，经过一次次的迭代，存放着不同的版本项目。即：<u>仓库以版本为单位进行存储</u>。</p>
-<h3 id="2、自己的远程-本地仓库间联系"><a href="#2、自己的远程-本地仓库间联系" class="headerlink" title="2、自己的远程/本地仓库间联系"></a>2、自己的远程/本地仓库间联系</h3><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png" alt="gq3h0y9rx1" style="zoom:50%;">
+      <a
+        href="https://github.com/Lencamo"
+        class="github-corner"
+        title="Follow me on GitHub"
+        aria-label="Follow me on GitHub"
+        rel="noopener"
+        target="_blank"
+        ><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
+          <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+          <path
+            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+            fill="currentColor"
+            style="transform-origin: 130px 106px"
+            class="octo-arm"
+          ></path>
+          <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor"
+            class="octo-body"
+          ></path></svg
+      ></a>
 
-<blockquote>
-<p>Remote：远程仓库（例如：自己的GitHub仓库、码云仓库）</p>
-<p>Repository：本地仓库（即我所说的特殊的文件夹）</p>
-<p>workspace：工作区（即你正在编辑的版本或者当前在特殊文件夹所看到的文件版本）</p>
-<br>
+      <noscript>
+        <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+      </noscript>
 
-<p><span style="background:red; color:black; font-weight:700;">重点</span>：👀</p>
-<p>index：缓存区（修改后的项目文件进入仓库前都要经过缓存区）</p>
-</blockquote>
-<p>&emsp;&emsp;不同的状态。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916165301754.png" alt="image-20210916165301754" style="zoom:50%;">
+      <div class="main-inner post posts-expand">
+        <div class="post-block">
+          <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+            <link
+              itemprop="mainEntityOfPage"
+              href="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/"
+            />
 
-<h3 id="2、版本与分支"><a href="#2、版本与分支" class="headerlink" title="2、版本与分支"></a>2、版本与分支</h3><p>&emsp;&emsp;git是什么？——一个分布式<span style="background-color:yellow;">版本</span>控制工具。涉及团队协作时，版本控制显得尤为重要，不同团队负责不同的分支（branch），最终与master分支合并，形成一个项目版本。</p>
-<p>&emsp;&emsp;当然就个人使用来看，基本上一个master分支就可以了。涉及团队协作时，往往设计多个分支（例如：bug修复分支hot_fix、开发者分支dev等等），用Sourcetree可视化客户端比较直观、方便。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/4702b6c46c1a66c09b6a731b840e2f56.png" alt="4702b6c46c1a66c09b6a731b840e2f56" style="zoom:50%;">
+            <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <meta itemprop="image" content="/hexo_demo/images/avatar.gif" />
+              <meta itemprop="name" content="Lencamo" />
+              <meta itemprop="description" content="东隅已逝，桑榆非晚" />
+            </span>
 
-<p>&emsp;&emsp;一个节点对应一个版本，一个仓库（项目）可以有多的分支；反正最后是要与master分支合并的。</p>
-<h2 id="二、git的安装与基本命令"><a href="#二、git的安装与基本命令" class="headerlink" title="二、git的安装与基本命令"></a>二、git的安装与基本命令</h2><h3 id="1、git的安装与配置"><a href="#1、git的安装与配置" class="headerlink" title="1、git的安装与配置"></a>1、<a target="_blank" rel="noopener" href="https://git-scm.com/">git的安装</a>与配置</h3><blockquote>
-<p>git命令在Git Bash Here命令行中进行😎。</p>
-<p>下面我介绍的git命令对于个人使用完全够了，即：只涉及一个master分支</p>
-</blockquote>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210914223459796.png" alt="image-20210914223459796" style="zoom:50%;">
+            <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+              <meta itemprop="name" content="Lencamo" />
+            </span>
+            <header class="post-header">
+              <h1 class="post-title" itemprop="name headline">git命令与Sourcetree的使用</h1>
 
-<p><strong>配置用户信息：</strong></p>
-<p><code>git config --global user.name &quot;名字&quot;</code></p>
-<p><code>git config - -global user.email &quot;邮箱地址&quot;</code></p>
-<h3 id="2、git的基础命令"><a href="#2、git的基础命令" class="headerlink" title="2、git的基础命令"></a>2、git的基础命令</h3><p><strong>①git的查看命令：</strong></p>
-<p><code>git status</code>     ✨ 查看项目文件此时的状态（在工作区、缓存区还是在仓库中）</p>
-<p><code>git config --list </code>     查看全部的用户信息</p>
-<p><code>git log</code>      查看所有的版本信息(例：版本ID、当前处于哪个分支)</p>
-<p><code>git reflog</code>        查看所有的操作记录</p>
-<p><code>git remote -v</code>       查看远程仓库库地址</p>
-<p><code>git mv &lt;filename&gt; &lt;new_filename&gt; </code>        修改项目文件名字</p>
-<br>
+              <div class="post-meta-container">
+                <div class="post-meta">
+                  <span class="post-meta-item">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-calendar"></i>
+                    </span>
+                    <span class="post-meta-item-text">发表于</span>
 
-<p><strong>②专有名词：</strong></p>
-<p>master：默认开发分支（最新版本的名字）</p>
-<p>origin：给远程仓库地址起别名的常用名字（http方式）</p>
-<p>origin_ssh：给远程仓库地址起别名的常用名字（ssh免密方式）</p>
-<p>HEAD：当前所在的版本（在分支操作时，也叫没有命名的分支）</p>
-<p>HEAD^ ：上一个版本</p>
-<p>HEAD~n：前n个版本</p>
-<p>③<strong>Linux基本命令</strong></p>
-<p>pwd、mkdir、cd、*.txt 、.   、ls、rm</p>
-<p>vim、cat、Ctrl+C、I键 等等</p>
-<h2 id="三、git的常用命令（个人使用-）"><a href="#三、git的常用命令（个人使用-）" class="headerlink" title="三、git的常用命令（个人使用:）"></a>三、git的常用命令（个人使用:）</h2><h3 id="1、git的本地操作"><a href="#1、git的本地操作" class="headerlink" title="1、git的本地操作"></a>1、git的本地操作</h3><h4 id="1-gt-、创建本地仓库"><a href="#1-gt-、创建本地仓库" class="headerlink" title="1&gt;、创建本地仓库"></a>1&gt;、创建本地仓库</h4><p><code>git init </code>     将普通文件夹变成一个仓库文件夹</p>
-<h4 id="2-gt-、提交工作区文件"><a href="#2-gt-、提交工作区文件" class="headerlink" title="2&gt;、提交工作区文件"></a>2&gt;、提交工作区文件</h4><p><code>git add &lt;filename&gt;</code>       将<strong>单个</strong>项目文件推到缓存区</p>
-<p><code>git add . </code>      <strong>所有</strong>项目文件推到缓存区</p>
-<br>
+                    <time
+                      title="创建时间：2021-09-17 12:50:13"
+                      itemprop="dateCreated datePublished"
+                      datetime="2021-09-17T12:50:13+08:00"
+                      >2021-09-17</time
+                    >
+                  </span>
+                  <span class="post-meta-item">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-calendar-check"></i>
+                    </span>
+                    <span class="post-meta-item-text">更新于</span>
+                    <time
+                      title="修改时间：2021-09-28 22:32:09"
+                      itemprop="dateModified"
+                      datetime="2021-09-28T22:32:09+08:00"
+                      >2021-09-28</time
+                    >
+                  </span>
+                  <span class="post-meta-item">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-folder"></i>
+                    </span>
+                    <span class="post-meta-item-text">分类于</span>
+                    <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                      <a href="/hexo_demo/categories/git/" itemprop="url" rel="index"
+                        ><span itemprop="name">git</span></a
+                      >
+                    </span>
+                  </span>
 
-<p><code>git commit -m &lt;add a readme file&gt; &lt;filename&gt;</code>          将<strong>单个</strong>缓存区的项目文件推到本地仓库</p>
-<p><code>git commit -m &lt;add a readme file&gt; -a</code>     <strong>所有</strong>缓冲区的项目文件推到本地仓库</p>
-<blockquote>
-<p>每一次commit就会生成一个节点，当然一次commit可能提交了多个项目文件，提交多个项目文件时在<code>&lt;filename&gt; </code>后面加 <code>&lt;filename2&gt;`` &lt;filename3&gt;</code> ……就可以了</p>
-<p>即每发生一次commit就会生成一个版本👀</p>
-</blockquote>
-<h4 id="3-gt-、撤回项目文件（可继续编辑）"><a href="#3-gt-、撤回项目文件（可继续编辑）" class="headerlink" title="3&gt;、撤回项目文件（可继续编辑）"></a>3&gt;、撤回项目文件（可继续编辑）</h4><p>①工作区已修改项目文件的撤回</p>
-<p><code>git checkout -- &lt;filename&gt;</code>        将<strong>工作区</strong>修改的项目文件撤回到初始状态</p>
-<blockquote>
-<p>即Ctrl + Z的升级版：撤销当前版本中修改后已经保存但未commit的项目文件</p>
-</blockquote>
-<br>
+                  <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-eye"></i>
+                    </span>
+                    <span class="post-meta-item-text">阅读次数：</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                  </span>
+                  <span class="post-meta-break"></span>
+                  <span class="post-meta-item" title="本文字数">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-file-word"></i>
+                    </span>
+                    <span class="post-meta-item-text">本文字数：</span>
+                    <span>6.1k</span>
+                  </span>
+                  <span class="post-meta-item" title="阅读时长">
+                    <span class="post-meta-item-icon">
+                      <i class="far fa-clock"></i>
+                    </span>
+                    <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                    <span>6 分钟</span>
+                  </span>
+                </div>
+              </div>
+            </header>
 
-<p>②缓存区中项目文件的撤回</p>
-<p><code>git reset HEAD -- &lt;filename&gt; </code>    将<strong>缓存区</strong>的项目文件撤回到工作区</p>
-<p>此时回到了①的状态</p>
-<p><code>git checkout -- &lt;filename&gt;</code>        将<strong>工作区</strong>修改的项目文件撤回到初始状态</p>
-<blockquote>
-<p>上面两个步骤的综合git命令：</p>
-<p><code>git checkout HEAD -- &lt;filename&gt;</code>     ✨直接将<strong>缓存区</strong>的项目文件撤回到初始状态</p>
-<p>【延展：<code>git checkout HEAD . </code>  这个表示把缓存区所有的项目文件撤回到初始状态   】</p>
-</blockquote>
-<br>
+            <div class="post-body" itemprop="articleBody">
+              <p>
+                &emsp;&emsp;很早之前就听说做为一个程序员会使用git是非常重要的，于是乎在我在早前就接触并学习了git。
+              </p>
+              <blockquote>
+                <p>其实早期我接触git，纯粹是为了弄一个所谓的github云笔记，也就是草草了事了😂。</p>
+                <span id="more"></span>
 
-<p>③本地仓库中项目文件的撤回</p>
-<blockquote>
-<p>因为文件已经commit，所有只能<a href="#history">回滚到历史版本</a></p>
-</blockquote>
-<h4 id="4-gt-、比较项目文件修改前后的区别"><a href="#4-gt-、比较项目文件修改前后的区别" class="headerlink" title="4&gt;、比较项目文件修改前后的区别"></a>4&gt;、比较项目文件修改前后的区别</h4><p>①工作区与缓存区的项目文件相比较</p>
-<p><code>git diff &lt;filename&gt;  </code>        单个项目文件</p>
-<p><code>git diff</code>          所以项目文件</p>
-<p>②缓存区与当前版本已提交的项目文件相比较</p>
-<p><code>git diff HEAD &lt;filename&gt;   </code> </p>
-<br>
+                <p>
+                  随着个人hexo博客的搭建，以及个人前端小项目的产生，让我对全面学习git的好奇心只增不减（虽然我的小项目根本几乎没有所谓的版本，发布后几乎没怎么改）。
+                </p>
+              </blockquote>
+              <p>
+                &emsp;&emsp;下面，我来简单介绍一下我对git的一些认知。涉及团队合作啥的复杂git命令我还在建议学习一下git的可视化客户端工具<span
+                  style="background-color: yellow"
+                  >Sourcetree</span
+                >（我的前车之鉴😭，没必要用git命令来<code>装逼</code>)。
+              </p>
+              <h2 id="一、仓库与版本">
+                <a href="#一、仓库与版本" class="headerlink" title="一、仓库与版本"></a
+                >一、仓库与版本
+              </h2>
+              <p>
+                &emsp;&emsp;一个项目的完成，往往会产生很多的版本，而伴随着新版本的产生，项目会变得趋于完善。
+              </p>
+              <h3 id="1、仓库——（特殊的文件夹）">
+                <a
+                  href="#1、仓库——（特殊的文件夹）"
+                  class="headerlink"
+                  title="1、仓库——（特殊的文件夹）"
+                ></a
+                >1、仓库——（特殊的文件夹）
+              </h3>
+              <p>
+                &emsp;&emsp;个人理解，<u>仓库可以想象成一个<strong>特殊的文件夹</strong></u
+                >，不同的是它可以通过git命令查看自己以前的版本项目。
+              </p>
+              <blockquote>
+                <p>
+                  想一想，自己电脑上的文件夹，要么保存修改，要么舍弃，只能二选一；而如果把它搞成一个仓库文件夹，就不用担心这样的事情了，即使你保存了修改，任然可以通过git命令查看修改之前的版本内容。
+                </p>
+              </blockquote>
+              <p>
+                &emsp;&emsp;类似于软件，有不同的版本。一旦当前要开发时出现有问题，要么在仓库中找到前面的版本进行重新开发升级，要么对当前的版本进行修改。
+              </p>
+              <p>
+                &emsp;&emsp;仓库就这样，经过一次次的迭代，存放着不同的版本项目。即：<u>仓库以版本为单位进行存储</u>。
+              </p>
+              <h3 id="2、自己的远程-本地仓库间联系">
+                <a
+                  href="#2、自己的远程-本地仓库间联系"
+                  class="headerlink"
+                  title="2、自己的远程/本地仓库间联系"
+                ></a
+                >2、自己的远程/本地仓库间联系
+              </h3>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/gq3h0y9rx1.png"
+                alt="gq3h0y9rx1"
+                style="zoom: 50%"
+              />
 
-<p>③缓存区与本地仓库历史版本的项目文件相比较</p>
-<p><code>git diff &lt;版本id&gt;  &lt;filename&gt;</code></p>
-<h4 id="4-gt-、删除已提交的项目文件"><a href="#4-gt-、删除已提交的项目文件" class="headerlink" title="4&gt;、删除已提交的项目文件"></a>4&gt;、删除已提交的项目文件</h4><p>①只删除工作区的项目文件</p>
-<p><code>git rm &lt;delete_filename&gt;    </code>  </p>
-<br>
+              <blockquote>
+                <p>Remote：远程仓库（例如：自己的GitHub仓库、码云仓库）</p>
+                <p>Repository：本地仓库（即我所说的特殊的文件夹）</p>
+                <p>workspace：工作区（即你正在编辑的版本或者当前在特殊文件夹所看到的文件版本）</p>
+                <br />
 
-<p>②同时删除缓存区的项目文件</p>
-<p>先<code>git rm &lt;delete_filename&gt;    </code>     </p>
-<p>然后 <code>git add &lt;delete_filename&gt;</code></p>
-<br>
+                <p><span style="background: red; color: black; font-weight: 700">重点</span>：👀</p>
+                <p>index：缓存区（修改后的项目文件进入仓库前都要经过缓存区）</p>
+              </blockquote>
+              <p>&emsp;&emsp;不同的状态。</p>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916165301754.png"
+                alt="image-20210916165301754"
+                style="zoom: 50%"
+              />
 
-<p>③同时删除本地仓库的项目文件</p>
-<p>先<code>git rm &lt;delete_filename&gt; </code>        </p>
-<p>然后 <code>git add &lt;delete_filename&gt;</code></p>
-<p>最后 <code>commit -m &lt;add a readme file&gt; &lt;delete_filename&gt; </code></p>
-<h4 id="5-gt-、回到历史版本-找回已删除的项目文件（俗称回滚）"><a href="#5-gt-、回到历史版本-找回已删除的项目文件（俗称回滚）" class="headerlink" title="5&gt;、回到历史版本/找回已删除的项目文件（俗称回滚）"></a>5&gt;、<a id="history">回到历史版本</a>/找回已删除的项目文件（俗称回滚）</h4><p><code>git reset --hard HEAD </code>  （全部回到当前版本的初始状态）</p>
-<blockquote>
-<p>即 这个git命令可以找回<u>工作区、缓冲区已经删除的项目文件</u></p>
-</blockquote>
-<br>
+              <h3 id="2、版本与分支">
+                <a href="#2、版本与分支" class="headerlink" title="2、版本与分支"></a>2、版本与分支
+              </h3>
+              <p>
+                &emsp;&emsp;git是什么？——一个分布式<span style="background-color: yellow">版本</span
+                >控制工具。涉及团队协作时，版本控制显得尤为重要，不同团队负责不同的分支（branch），最终与master分支合并，形成一个项目版本。
+              </p>
+              <p>
+                &emsp;&emsp;当然就个人使用来看，基本上一个master分支就可以了。涉及团队协作时，往往设计多个分支（例如：bug修复分支hot_fix、开发者分支dev等等），用Sourcetree可视化客户端比较直观、方便。
+              </p>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/4702b6c46c1a66c09b6a731b840e2f56.png"
+                alt="4702b6c46c1a66c09b6a731b840e2f56"
+                style="zoom: 50%"
+              />
 
-<p><code>git reset --hard &lt;版本ID&gt;</code>     （<strong>工作区，缓存区、本地仓库</strong>内容全部后退到历史版本状态） </p>
-<blockquote>
-<p>即 这个git命令可以在历史版本中找到<u>本地仓库已经删除的项目文件</u></p>
-</blockquote>
-<p><code>reset --mixed &lt;版本ID&gt;</code>        （<strong>缓存区、本地仓库</strong>内容后退到历史版本状态） </p>
-<p><code>reset --soft &lt;版本ID&gt;</code>          （<strong>本地仓库</strong>内容后退到历史版本状态） </p>
-<h3 id="2、git的远程操作"><a href="#2、git的远程操作" class="headerlink" title="2、git的远程操作"></a>2、git的远程操作</h3><h4 id="1-gt-、本地仓库与远程仓库间的克隆"><a href="#1-gt-、本地仓库与远程仓库间的克隆" class="headerlink" title="1&gt;、本地仓库与远程仓库间的克隆"></a>1&gt;、本地仓库与远程仓库间的克隆</h4><p><code>git clone &lt;GitHub仓库地址/本地仓库目录&gt;</code>         将项目克隆一份到新的本地仓库</p>
-<h4 id="2-gt-、为自己已创建的远程仓库（GitHub仓库）地址取别名"><a href="#2-gt-、为自己已创建的远程仓库（GitHub仓库）地址取别名" class="headerlink" title="2&gt;、为自己已创建的远程仓库（GitHub仓库）地址取别名"></a>2&gt;、为自己已创建的远程仓库（GitHub仓库）地址取别名</h4><p><code>git remote add origin &lt;GitHub仓库地址&gt; </code>  </p>
-<blockquote>
-<p>即： <code>git remote add &lt;仓库a地址别名&gt;  &lt;仓库a的地址&gt;</code></p>
-<p>默认别名为 orgin</p>
-</blockquote>
-<h4 id="3-gt-、将本地仓库推送到自己的远程仓库"><a href="#3-gt-、将本地仓库推送到自己的远程仓库" class="headerlink" title="3&gt;、将本地仓库推送到自己的远程仓库"></a>3&gt;、将本地仓库推送到自己的远程仓库</h4><p>先  <code>git remote add origin &lt;GitHub仓库地址&gt;</code></p>
-<p><span style="color: gray">// 🙏<em>git pull  origin master       将远程仓库最新的代码拉到自己的工作区[刷新 ]✨（团队合作时，远程仓库可以会有其他团队成员push了新的项目代码，防止后续自己push时产生冲突）</em>  </span></p>
-<p><code>git push origin master</code>        将本地仓库推到GitHub远程仓库（origin） 【此处要录入你的GitHub账号和密码】</p>
-<blockquote>
-<p>即： git remote add &lt;仓库a地址别名&gt;  &lt;仓库a的地址&gt;</p>
-</blockquote>
-<h2 id="三、git分支相关命令（团队使用）"><a href="#三、git分支相关命令（团队使用）" class="headerlink" title="三、git分支相关命令（团队使用）"></a>三、git分支相关命令（团队使用）</h2><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/20190112114848032220.png" alt="20190112114848032220" style="zoom:50%;">
+              <p>
+                &emsp;&emsp;一个节点对应一个版本，一个仓库（项目）可以有多的分支；反正最后是要与master分支合并的。
+              </p>
+              <h2 id="二、git的安装与基本命令">
+                <a
+                  href="#二、git的安装与基本命令"
+                  class="headerlink"
+                  title="二、git的安装与基本命令"
+                ></a
+                >二、git的安装与基本命令
+              </h2>
+              <h3 id="1、git的安装与配置">
+                <a href="#1、git的安装与配置" class="headerlink" title="1、git的安装与配置"></a
+                >1、<a target="_blank" rel="noopener" href="https://git-scm.com/">git的安装</a
+                >与配置
+              </h3>
+              <blockquote>
+                <p>git命令在Git Bash Here命令行中进行😎。</p>
+                <p>下面我介绍的git命令对于个人使用完全够了，即：只涉及一个master分支</p>
+              </blockquote>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210914223459796.png"
+                alt="image-20210914223459796"
+                style="zoom: 50%"
+              />
 
-<h3 id="1、创建、切换、删除分支"><a href="#1、创建、切换、删除分支" class="headerlink" title="1、创建、切换、删除分支"></a>1、创建、切换、删除分支</h3><p><code>git branch &lt;分支名&gt;</code>       创建本地仓库分支</p>
-<p><code>git checkout &lt;分支名&gt;</code>       切换本地仓库内的分支 【git checkout <strong>orign/master</strong>     切换到远程仓库的master分支】</p>
-<p><code>git branch -D &lt;分支名&gt;</code>     删除本地仓库的分支</p>
-<br>
+              <p><strong>配置用户信息：</strong></p>
+              <p><code>git config --global user.name &quot;名字&quot;</code></p>
+              <p><code>git config - -global user.email &quot;邮箱地址&quot;</code></p>
+              <h3 id="2、git的基础命令">
+                <a href="#2、git的基础命令" class="headerlink" title="2、git的基础命令"></a
+                >2、git的基础命令
+              </h3>
+              <p><strong>①git的查看命令：</strong></p>
+              <p>
+                <code>git status</code> ✨ 查看项目文件此时的状态（在工作区、缓存区还是在仓库中）
+              </p>
+              <p><code>git config --list </code> 查看全部的用户信息</p>
+              <p><code>git log</code> 查看所有的版本信息(例：版本ID、当前处于哪个分支)</p>
+              <p><code>git reflog</code> 查看所有的操作记录</p>
+              <p><code>git remote -v</code> 查看远程仓库库地址</p>
+              <p><code>git mv &lt;filename&gt; &lt;new_filename&gt; </code> 修改项目文件名字</p>
+              <br />
 
-<p><code>git branch -v</code>       查看所有的分支</p>
-<p><code>log --oneline --decorate --graph --all</code>        查看分支结构 </p>
-<blockquote>
-<p>一个项目往往有许多模块，在master分支基础上创建不同的分支，让不同的团队去</p>
-<p>开发不同的模块，最后与master分支进行合并，能提高开发效率。</p>
-</blockquote>
-<h3 id="2、合并分支"><a href="#2、合并分支" class="headerlink" title="2、合并分支"></a>2、合并分支</h3><p><code>git merge &lt;要一起合并的分支名X</code>&gt;       表示当前分支与分支X合并</p>
-<h3 id="3、合并冲突"><a href="#3、合并冲突" class="headerlink" title="3、合并冲突"></a>3、合并冲突</h3><p>&emsp;&emsp;原因：当前分支的某个版本和要合并的分支某个版本，有同一个项目文件，但内容不同。</p>
-<blockquote>
-<p>解决方案： 修改存在冲突的项目文件内容即可</p>
-<p>①要么以当前分支的内容为准&amp;emsp；&emsp;②要么以要合并的内容为准&emsp;&emsp;③要么两个都要，去掉重复内容即可</p>
-</blockquote>
-<p>&emsp;&emsp; 然后：</p>
-<p><code>git add &lt;conflict_filename&gt;</code></p>
-<p><span style="color:red;">git commit -m &lt;_add a readme file&gt; </span></p>
-<p>&emsp;&emsp; 注意，🐱‍👤这里与前面的commit命令不同，commit命令后不用加文件名</p>
-<h3 id="4、个人所在公司团队间git的远程操作"><a href="#4、个人所在公司团队间git的远程操作" class="headerlink" title="4、个人所在公司团队间git的远程操作"></a>4、个人所在公司团队间git的远程操作</h3><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917101542466.png" alt="image-20210917101542466" style="zoom: 67%;">
+              <p><strong>②专有名词：</strong></p>
+              <p>master：默认开发分支（最新版本的名字）</p>
+              <p>origin：给远程仓库地址起别名的常用名字（http方式）</p>
+              <p>origin_ssh：给远程仓库地址起别名的常用名字（ssh免密方式）</p>
+              <p>HEAD：当前所在的版本（在分支操作时，也叫没有命名的分支）</p>
+              <p>HEAD^ ：上一个版本</p>
+              <p>HEAD~n：前n个版本</p>
+              <p>③<strong>Linux基本命令</strong></p>
+              <p>pwd、mkdir、cd、*.txt 、. 、ls、rm</p>
+              <p>vim、cat、Ctrl+C、I键 等等</p>
+              <h2 id="三、git的常用命令（个人使用-）">
+                <a
+                  href="#三、git的常用命令（个人使用-）"
+                  class="headerlink"
+                  title="三、git的常用命令（个人使用:）"
+                ></a
+                >三、git的常用命令（个人使用:）
+              </h2>
+              <h3 id="1、git的本地操作">
+                <a href="#1、git的本地操作" class="headerlink" title="1、git的本地操作"></a
+                >1、git的本地操作
+              </h3>
+              <h4 id="1-gt-、创建本地仓库">
+                <a href="#1-gt-、创建本地仓库" class="headerlink" title="1&gt;、创建本地仓库"></a
+                >1&gt;、创建本地仓库
+              </h4>
+              <p><code>git init </code> 将普通文件夹变成一个仓库文件夹</p>
+              <h4 id="2-gt-、提交工作区文件">
+                <a
+                  href="#2-gt-、提交工作区文件"
+                  class="headerlink"
+                  title="2&gt;、提交工作区文件"
+                ></a
+                >2&gt;、提交工作区文件
+              </h4>
+              <p><code>git add &lt;filename&gt;</code> 将<strong>单个</strong>项目文件推到缓存区</p>
+              <p><code>git add . </code> <strong>所有</strong>项目文件推到缓存区</p>
+              <br />
 
-<h4 id="1-gt-自己公司成员间的git基本操作"><a href="#1-gt-自己公司成员间的git基本操作" class="headerlink" title="1&gt;自己公司成员间的git基本操作"></a>1&gt;自己公司成员间的git基本操作</h4><p><code>git clone &lt;公司项目的远程仓库地址&gt;</code>         将远程仓库项目克隆一份到自己的本地仓库</p>
-<br>
+              <p>
+                <code>git commit -m &lt;add a readme file&gt; &lt;filename&gt;</code>
+                将<strong>单个</strong>缓存区的项目文件推到本地仓库
+              </p>
+              <p>
+                <code>git commit -m &lt;add a readme file&gt; -a</code>
+                <strong>所有</strong>缓冲区的项目文件推到本地仓库
+              </p>
+              <blockquote>
+                <p>
+                  每一次commit就会生成一个节点，当然一次commit可能提交了多个项目文件，提交多个项目文件时在<code
+                    >&lt;filename&gt; </code
+                  >后面加 <code>&lt;filename2&gt;`` &lt;filename3&gt;</code> ……就可以了
+                </p>
+                <p>即每发生一次commit就会生成一个版本👀</p>
+              </blockquote>
+              <h4 id="3-gt-、撤回项目文件（可继续编辑）">
+                <a
+                  href="#3-gt-、撤回项目文件（可继续编辑）"
+                  class="headerlink"
+                  title="3&gt;、撤回项目文件（可继续编辑）"
+                ></a
+                >3&gt;、撤回项目文件（可继续编辑）
+              </h4>
+              <p>①工作区已修改项目文件的撤回</p>
+              <p>
+                <code>git checkout -- &lt;filename&gt;</code>
+                将<strong>工作区</strong>修改的项目文件撤回到初始状态
+              </p>
+              <blockquote>
+                <p>即Ctrl + Z的升级版：撤销当前版本中修改后已经保存但未commit的项目文件</p>
+              </blockquote>
+              <br />
 
-<p><code>git remote add origin &lt;GitHub仓库地址&gt;</code>       将远程仓库项目地址命名为origin</p>
-<p><code>git pull  origin master</code>        将远程仓库项目（origin）拉到个人本地工作区  【相对于管理者的先fetch再margin】</p>
-<p><code>git push origin master</code>        将在本地仓库中个人完成的项目内容push到远程仓库（origin）的master分支上✨【<span style="background-color:yellow;">此处要录入你的GitHub账号和密码</span>】</p>
-<blockquote>
-<p>①前面由于是将个人本地仓库 push 到 自己的GitHub远程仓库，登录自己的GitHub账号是可以成功的。</p>
-<p>②但团队协作时，如果直接push是不会成功的，因为项目的远程仓库往往不是自己建的 ，所以要想push成功，首先要加入 <strong>项目团队</strong></p>
-</blockquote>
-<h4 id="2-gt-加入项目团队"><a href="#2-gt-加入项目团队" class="headerlink" title="2&gt;加入项目团队"></a>2&gt;加入项目团队</h4><p>&emsp;&emsp;首先需要项目仓库创建者（管理者）让你加入团队，并给你发送了邀请地址</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916224913241.png" alt="image-20210916224913241" style="zoom: 33%;">
+              <p>②缓存区中项目文件的撤回</p>
+              <p>
+                <code>git reset HEAD -- &lt;filename&gt; </code>
+                将<strong>缓存区</strong>的项目文件撤回到工作区
+              </p>
+              <p>此时回到了①的状态</p>
+              <p>
+                <code>git checkout -- &lt;filename&gt;</code>
+                将<strong>工作区</strong>修改的项目文件撤回到初始状态
+              </p>
+              <blockquote>
+                <p>上面两个步骤的综合git命令：</p>
+                <p>
+                  <code>git checkout HEAD -- &lt;filename&gt;</code>
+                  ✨直接将<strong>缓存区</strong>的项目文件撤回到初始状态
+                </p>
+                <p>
+                  【延展：<code>git checkout HEAD . </code>
+                  这个表示把缓存区所有的项目文件撤回到初始状态 】
+                </p>
+              </blockquote>
+              <br />
 
-<p>&emsp;&emsp;然后，自己在GitHub上登陆自己的GitHub账号，在上面的网址栏粘贴<strong>邀请地址</strong>，同意后该项目仓库就会显示在你的GitHub里面。</p>
-<h4 id="3-gt-相对于项目管理者的git命令"><a href="#3-gt-相对于项目管理者的git命令" class="headerlink" title="3&gt;相对于项目管理者的git命令"></a>3&gt;相对于项目管理者的git命令</h4><p>先抓取远程分支的 最新数据到自己的<strong>本地仓库</strong>，但工作区内容仍然没变（<u>并没有和本地仓库合并，还是当前的项目版本</u>）</p>
-<p><code>git fetch origin master</code> </p>
-<br>
+              <p>③本地仓库中项目文件的撤回</p>
+              <blockquote>
+                <p>因为文件已经commit，所有只能<a href="#history">回滚到历史版本</a></p>
+              </blockquote>
+              <h4 id="4-gt-、比较项目文件修改前后的区别">
+                <a
+                  href="#4-gt-、比较项目文件修改前后的区别"
+                  class="headerlink"
+                  title="4&gt;、比较项目文件修改前后的区别"
+                ></a
+                >4&gt;、比较项目文件修改前后的区别
+              </h4>
+              <p>①工作区与缓存区的项目文件相比较</p>
+              <p><code>git diff &lt;filename&gt; </code> 单个项目文件</p>
+              <p><code>git diff</code> 所以项目文件</p>
+              <p>②缓存区与当前版本已提交的项目文件相比较</p>
+              <p><code>git diff HEAD &lt;filename&gt; </code></p>
+              <br />
 
-<p>然后切换到远程仓库查看 项目内容是否有误</p>
-<p><code>git checkout origin/master</code></p>
-<p>cat ……</p>
-<br>
+              <p>③缓存区与本地仓库历史版本的项目文件相比较</p>
+              <p><code>git diff &lt;版本id&gt; &lt;filename&gt;</code></p>
+              <h4 id="4-gt-、删除已提交的项目文件">
+                <a
+                  href="#4-gt-、删除已提交的项目文件"
+                  class="headerlink"
+                  title="4&gt;、删除已提交的项目文件"
+                ></a
+                >4&gt;、删除已提交的项目文件
+              </h4>
+              <p>①只删除工作区的项目文件</p>
+              <p><code>git rm &lt;delete_filename&gt; </code></p>
+              <br />
 
-<p>最后确定无误后，才将本地仓库与远程仓库合并，工作区内容也相应改变（<u>此时项目合并后数据更新，产生新的项目版本</u>）</p>
-<p><code>git margin origin/master</code></p>
-<h3 id="5、跨公司合作git的相关远程操作"><a href="#5、跨公司合作git的相关远程操作" class="headerlink" title="5、跨公司合作git的相关远程操作"></a>5、跨公司合作git的相关远程操作</h3><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917103905485.png" alt="image-20210917103905485" style="zoom:67%;">
+              <p>②同时删除缓存区的项目文件</p>
+              <p>先<code>git rm &lt;delete_filename&gt; </code></p>
+              <p>然后 <code>git add &lt;delete_filename&gt;</code></p>
+              <br />
 
-<p>&emsp;&emsp;合作公司A首先要先得到我们公司项目地址，然后fork项目到他们的GitHub中去。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916230114842.png" alt="image-20210916230114842" style="zoom:50%;">
+              <p>③同时删除本地仓库的项目文件</p>
+              <p>先<code>git rm &lt;delete_filename&gt; </code></p>
+              <p>然后 <code>git add &lt;delete_filename&gt;</code></p>
+              <p>最后 <code>commit -m &lt;add a readme file&gt; &lt;delete_filename&gt; </code></p>
+              <h4 id="5-gt-、回到历史版本-找回已删除的项目文件（俗称回滚）">
+                <a
+                  href="#5-gt-、回到历史版本-找回已删除的项目文件（俗称回滚）"
+                  class="headerlink"
+                  title="5&gt;、回到历史版本/找回已删除的项目文件（俗称回滚）"
+                ></a
+                >5&gt;、<a id="history">回到历史版本</a>/找回已删除的项目文件（俗称回滚）
+              </h4>
+              <p><code>git reset --hard HEAD </code> （全部回到当前版本的初始状态）</p>
+              <blockquote>
+                <p>即 这个git命令可以找回<u>工作区、缓冲区已经删除的项目文件</u></p>
+              </blockquote>
+              <br />
 
-<p>&emsp;&emsp;然后合作公司A自己进行项目优化，完成优化后pull request给我们的公司审核</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235256298.png" alt="image-20210916235256298" style="zoom: 50%;">
+              <p>
+                <code>git reset --hard &lt;版本ID&gt;</code>
+                （<strong>工作区，缓存区、本地仓库</strong>内容全部后退到历史版本状态）
+              </p>
+              <blockquote>
+                <p>即 这个git命令可以在历史版本中找到<u>本地仓库已经删除的项目文件</u></p>
+              </blockquote>
+              <p>
+                <code>reset --mixed &lt;版本ID&gt;</code>
+                （<strong>缓存区、本地仓库</strong>内容后退到历史版本状态）
+              </p>
+              <p>
+                <code>reset --soft &lt;版本ID&gt;</code>
+                （<strong>本地仓库</strong>内容后退到历史版本状态）
+              </p>
+              <h3 id="2、git的远程操作">
+                <a href="#2、git的远程操作" class="headerlink" title="2、git的远程操作"></a
+                >2、git的远程操作
+              </h3>
+              <h4 id="1-gt-、本地仓库与远程仓库间的克隆">
+                <a
+                  href="#1-gt-、本地仓库与远程仓库间的克隆"
+                  class="headerlink"
+                  title="1&gt;、本地仓库与远程仓库间的克隆"
+                ></a
+                >1&gt;、本地仓库与远程仓库间的克隆
+              </h4>
+              <p>
+                <code>git clone &lt;GitHub仓库地址/本地仓库目录&gt;</code>
+                将项目克隆一份到新的本地仓库
+              </p>
+              <h4 id="2-gt-、为自己已创建的远程仓库（GitHub仓库）地址取别名">
+                <a
+                  href="#2-gt-、为自己已创建的远程仓库（GitHub仓库）地址取别名"
+                  class="headerlink"
+                  title="2&gt;、为自己已创建的远程仓库（GitHub仓库）地址取别名"
+                ></a
+                >2&gt;、为自己已创建的远程仓库（GitHub仓库）地址取别名
+              </h4>
+              <p><code>git remote add origin &lt;GitHub仓库地址&gt; </code></p>
+              <blockquote>
+                <p>即： <code>git remote add &lt;仓库a地址别名&gt; &lt;仓库a的地址&gt;</code></p>
+                <p>默认别名为 orgin</p>
+              </blockquote>
+              <h4 id="3-gt-、将本地仓库推送到自己的远程仓库">
+                <a
+                  href="#3-gt-、将本地仓库推送到自己的远程仓库"
+                  class="headerlink"
+                  title="3&gt;、将本地仓库推送到自己的远程仓库"
+                ></a
+                >3&gt;、将本地仓库推送到自己的远程仓库
+              </h4>
+              <p>先 <code>git remote add origin &lt;GitHub仓库地址&gt;</code></p>
+              <p>
+                <span style="color: gray"
+                  >// 🙏<em
+                    >git pull  origin master       将远程仓库最新的代码拉到自己的工作区[刷新
+                    ]✨（团队合作时，远程仓库可以会有其他团队成员push了新的项目代码，防止后续自己push时产生冲突）</em
+                  >
+                </span>
+              </p>
+              <p>
+                <code>git push origin master</code> 将本地仓库推到GitHub远程仓库（origin）
+                【此处要录入你的GitHub账号和密码】
+              </p>
+              <blockquote>
+                <p>即： git remote add &lt;仓库a地址别名&gt; &lt;仓库a的地址&gt;</p>
+              </blockquote>
+              <h2 id="三、git分支相关命令（团队使用）">
+                <a
+                  href="#三、git分支相关命令（团队使用）"
+                  class="headerlink"
+                  title="三、git分支相关命令（团队使用）"
+                ></a
+                >三、git分支相关命令（团队使用）
+              </h2>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/20190112114848032220.png"
+                alt="20190112114848032220"
+                style="zoom: 50%"
+              />
 
-<p>&emsp;&emsp;我们自己的公司通过上图的pull request模块中进行检查、交流后，最后merge pull request通过申请。</p>
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235541452.png" alt="image-20210916235541452" style="zoom:50%;">
+              <h3 id="1、创建、切换、删除分支">
+                <a
+                  href="#1、创建、切换、删除分支"
+                  class="headerlink"
+                  title="1、创建、切换、删除分支"
+                ></a
+                >1、创建、切换、删除分支
+              </h3>
+              <p><code>git branch &lt;分支名&gt;</code> 创建本地仓库分支</p>
+              <p>
+                <code>git checkout &lt;分支名&gt;</code> 切换本地仓库内的分支 【git checkout
+                <strong>orign/master</strong> 切换到远程仓库的master分支】
+              </p>
+              <p><code>git branch -D &lt;分支名&gt;</code> 删除本地仓库的分支</p>
+              <br />
 
-<h2 id="四、ssh免密登录-单个账号"><a href="#四、ssh免密登录-单个账号" class="headerlink" title="四、ssh免密登录(单个账号)"></a>四、ssh免密登录(单个账号)</h2><p>&emsp;&emsp;通过ssh免密操作，当自己将本地仓库push到远程仓库时就不需要密码验证了。</p>
-<h3 id="1、免密登录实现基础"><a href="#1、免密登录实现基础" class="headerlink" title="1、免密登录实现基础"></a>1、免密登录实现基础</h3><h4 id="1-gt-、进入用户主目录"><a href="#1-gt-、进入用户主目录" class="headerlink" title="1&gt;、进入用户主目录"></a>1&gt;、进入用户主目录</h4><p><code>cd ~</code></p>
-<p><code>pwd</code></p>
-<h4 id="2-gt-、通过下面的命令即可在用pwd命令得到的目录下建立一个-ssh文件"><a href="#2-gt-、通过下面的命令即可在用pwd命令得到的目录下建立一个-ssh文件" class="headerlink" title="2&gt;、通过下面的命令即可在用pwd命令得到的目录下建立一个.ssh文件"></a>2&gt;、通过下面的命令即可在用pwd命令得到的目录下建立一个.ssh文件</h4><p><code>ssh-keygen -t rsa -C &lt;个人的GitHub账号邮箱地址&gt;</code></p>
-<p><code>cd ./.ssh</code></p>
-<p><code>ls</code></p>
-<blockquote>
-<p>通过上面的命令，不仅生成了一个.ssh文件，并且该文件目录下自动生成了id_rsa和id_rsa.pub两个文件</p>
-</blockquote>
-<h4 id="3-gt-、复制id-rsa-pub文件里的全部秘钥内容"><a href="#3-gt-、复制id-rsa-pub文件里的全部秘钥内容" class="headerlink" title="3&gt;、复制id_rsa.pub文件里的全部秘钥内容"></a>3&gt;、复制id_rsa.pub文件里的全部秘钥内容</h4><p>在上面代码的基础上，写人下面的命令</p>
-<p><code>vi id_rsa.pub</code></p>
-<blockquote>
-<p>通过上面的命令，得到的结果即为 <span style="background-color:yellow;">秘钥内容</span>，复制后输入命令：<code>:wq </code>即可退出</p>
-</blockquote>
-<h4 id="4-gt-、将秘钥内容与GitHub账号相关联"><a href="#4-gt-、将秘钥内容与GitHub账号相关联" class="headerlink" title="4&gt;、将秘钥内容与GitHub账号相关联"></a>4&gt;、将秘钥内容与GitHub账号相关联</h4><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917111533900.png" alt="image-20210917111533900" style="zoom:50%;">
+              <p><code>git branch -v</code> 查看所有的分支</p>
+              <p><code>log --oneline --decorate --graph --all</code> 查看分支结构</p>
+              <blockquote>
+                <p>一个项目往往有许多模块，在master分支基础上创建不同的分支，让不同的团队去</p>
+                <p>开发不同的模块，最后与master分支进行合并，能提高开发效率。</p>
+              </blockquote>
+              <h3 id="2、合并分支">
+                <a href="#2、合并分支" class="headerlink" title="2、合并分支"></a>2、合并分支
+              </h3>
+              <p><code>git merge &lt;要一起合并的分支名X</code>&gt; 表示当前分支与分支X合并</p>
+              <h3 id="3、合并冲突">
+                <a href="#3、合并冲突" class="headerlink" title="3、合并冲突"></a>3、合并冲突
+              </h3>
+              <p>
+                &emsp;&emsp;原因：当前分支的某个版本和要合并的分支某个版本，有同一个项目文件，但内容不同。
+              </p>
+              <blockquote>
+                <p>解决方案： 修改存在冲突的项目文件内容即可</p>
+                <p>
+                  ①要么以当前分支的内容为准&amp;emsp；&emsp;②要么以要合并的内容为准&emsp;&emsp;③要么两个都要，去掉重复内容即可
+                </p>
+              </blockquote>
+              <p>&emsp;&emsp; 然后：</p>
+              <p><code>git add &lt;conflict_filename&gt;</code></p>
+              <p><span style="color: red">git commit -m &lt;_add a readme file&gt; </span></p>
+              <p>&emsp;&emsp; 注意，🐱‍👤这里与前面的commit命令不同，commit命令后不用加文件名</p>
+              <h3 id="4、个人所在公司团队间git的远程操作">
+                <a
+                  href="#4、个人所在公司团队间git的远程操作"
+                  class="headerlink"
+                  title="4、个人所在公司团队间git的远程操作"
+                ></a
+                >4、个人所在公司团队间git的远程操作
+              </h3>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917101542466.png"
+                alt="image-20210917101542466"
+                style="zoom: 67%"
+              />
 
-<img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917113434860.png" alt="image-20210917113434860" style="zoom: 50%;">
+              <h4 id="1-gt-自己公司成员间的git基本操作">
+                <a
+                  href="#1-gt-自己公司成员间的git基本操作"
+                  class="headerlink"
+                  title="1&gt;自己公司成员间的git基本操作"
+                ></a
+                >1&gt;自己公司成员间的git基本操作
+              </h4>
+              <p>
+                <code>git clone &lt;公司项目的远程仓库地址&gt;</code>
+                将远程仓库项目克隆一份到自己的本地仓库
+              </p>
+              <br />
 
-<h3 id="2、ssh免密登录方式的使用"><a href="#2、ssh免密登录方式的使用" class="headerlink" title="2、ssh免密登录方式的使用"></a>2、ssh免密登录方式的使用</h3><h4 id="1-gt-、为项目仓库地址添加一个ssh地址别名"><a href="#1-gt-、为项目仓库地址添加一个ssh地址别名" class="headerlink" title="1&gt;、为项目仓库地址添加一个ssh地址别名"></a>1&gt;、为项目仓库地址添加一个ssh地址别名</h4><p><code>git remote add origin_ssh &lt;远程项目仓库的ssh地址&gt;</code></p>
-<p><code>git push origin_ssh master</code></p>
-<blockquote>
-<p>即：git命令和前面的一样，只是涉及origin时，将origin改为origin_ssh即可</p>
-</blockquote>
-<h2 id="五、Sourcetree客户端"><a href="#五、Sourcetree客户端" class="headerlink" title="五、Sourcetree客户端"></a>五、Sourcetree客户端</h2><img src="/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210915131512142.png" alt="image-20210915131512142" style="zoom:50%;">
+              <p>
+                <code>git remote add origin &lt;GitHub仓库地址&gt;</code>
+                将远程仓库项目地址命名为origin
+              </p>
+              <p>
+                <code>git pull origin master</code> 将远程仓库项目（origin）拉到个人本地工作区
+                【相对于管理者的先fetch再margin】
+              </p>
+              <p>
+                <code>git push origin master</code>
+                将在本地仓库中个人完成的项目内容push到远程仓库（origin）的master分支上✨【<span
+                  style="background-color: yellow"
+                  >此处要录入你的GitHub账号和密码</span
+                >】
+              </p>
+              <blockquote>
+                <p>
+                  ①前面由于是将个人本地仓库 push 到
+                  自己的GitHub远程仓库，登录自己的GitHub账号是可以成功的。
+                </p>
+                <p>
+                  ②但团队协作时，如果直接push是不会成功的，因为项目的远程仓库往往不是自己建的
+                  ，所以要想push成功，首先要加入 <strong>项目团队</strong>
+                </p>
+              </blockquote>
+              <h4 id="2-gt-加入项目团队">
+                <a href="#2-gt-加入项目团队" class="headerlink" title="2&gt;加入项目团队"></a
+                >2&gt;加入项目团队
+              </h4>
+              <p>&emsp;&emsp;首先需要项目仓库创建者（管理者）让你加入团队，并给你发送了邀请地址</p>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916224913241.png"
+                alt="image-20210916224913241"
+                style="zoom: 33%"
+              />
 
-<blockquote>
-<p>注意：  ①使用分支时，不能有未提交文件的分支。</p>
-</blockquote>
-<h3 id="1、重置到当前分支到此次提交"><a href="#1、重置到当前分支到此次提交" class="headerlink" title="1、重置到当前分支到此次提交"></a>1、重置到当前分支到此次提交</h3><p>&emsp;&emsp; &emsp;&emsp; —-&gt; 通常选择强制合并</p>
-<h3 id="2、回滚提交"><a href="#2、回滚提交" class="headerlink" title="2、回滚提交"></a>2、回滚提交</h3><p>&emsp;&emsp; &emsp;&emsp;—-&gt;操作自动合并master分支问题</p>
-<h3 id="3、查看历史版本"><a href="#3、查看历史版本" class="headerlink" title="3、查看历史版本"></a>3、查看历史版本</h3><p>&emsp;&emsp; &emsp;&emsp;—-&gt;双击即可查看的历史节点（前提：当前没有未提交的修改文件）</p>
-<h3 id="4、修改历史版本并创建新的分支"><a href="#4、修改历史版本并创建新的分支" class="headerlink" title="4、修改历史版本并创建新的分支"></a>4、修改历史版本并创建新的分支</h3><p>&emsp;&emsp; &emsp;&emsp;—-&gt;创建新的分支（前提：要给它命名）</p>
-<h3 id="5、分支合并💖"><a href="#5、分支合并💖" class="headerlink" title="5、分支合并💖"></a>5、分支合并💖</h3><p>&emsp;&emsp; &emsp;&emsp;—-&gt;最后一定会发生</p>
-<h3 id="6、合并冲突🤔"><a href="#6、合并冲突🤔" class="headerlink" title="6、合并冲突🤔"></a>6、合并冲突🤔</h3><p>&emsp;&emsp; &emsp;&emsp;—-&gt;呵呵，我懂就行</p>
-<br>
+              <p>
+                &emsp;&emsp;然后，自己在GitHub上登陆自己的GitHub账号，在上面的网址栏粘贴<strong>邀请地址</strong>，同意后该项目仓库就会显示在你的GitHub里面。
+              </p>
+              <h4 id="3-gt-相对于项目管理者的git命令">
+                <a
+                  href="#3-gt-相对于项目管理者的git命令"
+                  class="headerlink"
+                  title="3&gt;相对于项目管理者的git命令"
+                ></a
+                >3&gt;相对于项目管理者的git命令
+              </h4>
+              <p>
+                先抓取远程分支的
+                最新数据到自己的<strong>本地仓库</strong>，但工作区内容仍然没变（<u>并没有和本地仓库合并，还是当前的项目版本</u>）
+              </p>
+              <p><code>git fetch origin master</code></p>
+              <br />
 
-<h2 id="五、友情提示："><a href="#五、友情提示：" class="headerlink" title="五、友情提示："></a>五、友情提示：</h2><p>​         &emsp;&emsp;<a target="_blank" rel="noopener" href="https://gitee.com/all-about-git">软件、插件下载</a></p>
-<p>​        &emsp;&emsp; <a target="_blank" rel="noopener" href="https://www.bootcss.com/p/git-guide/">git命令学习文档</a></p>
-<p>​         &emsp;&emsp;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qg41177Dd?from=search&seid=1835252203833884066&spm_id_from=333.337.0.0">Sourcetree学习视频</a></p>
-<p>​         &emsp;&emsp;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17o4y1Q7Sx?p=1">git的学习视频</a></p>
-<blockquote>
-<p>更多内容，欢迎🎉🎉光临<a target="_blank" rel="noopener" href="https://github.com/Lencamo">https://github.com/Lencamo</a></p>
-</blockquote>
+              <p>然后切换到远程仓库查看 项目内容是否有误</p>
+              <p><code>git checkout origin/master</code></p>
+              <p>cat ……</p>
+              <br />
 
-    </div>
+              <p>
+                最后确定无误后，才将本地仓库与远程仓库合并，工作区内容也相应改变（<u>此时项目合并后数据更新，产生新的项目版本</u>）
+              </p>
+              <p><code>git margin origin/master</code></p>
+              <h3 id="5、跨公司合作git的相关远程操作">
+                <a
+                  href="#5、跨公司合作git的相关远程操作"
+                  class="headerlink"
+                  title="5、跨公司合作git的相关远程操作"
+                ></a
+                >5、跨公司合作git的相关远程操作
+              </h3>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917103905485.png"
+                alt="image-20210917103905485"
+                style="zoom: 67%"
+              />
 
-    
-    
-    
+              <p>
+                &emsp;&emsp;合作公司A首先要先得到我们公司项目地址，然后fork项目到他们的GitHub中去。
+              </p>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916230114842.png"
+                alt="image-20210916230114842"
+                style="zoom: 50%"
+              />
 
-    <footer class="post-footer">
-          
+              <p>
+                &emsp;&emsp;然后合作公司A自己进行项目优化，完成优化后pull request给我们的公司审核
+              </p>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235256298.png"
+                alt="image-20210916235256298"
+                style="zoom: 50%"
+              />
 
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>Lencamo
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git命令与Sourcetree的使用">https://lencamo.cn/2021/09/17/git命令与Sourcetree的使用/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <p>
+                &emsp;&emsp;我们自己的公司通过上图的pull request模块中进行检查、交流后，最后merge
+                pull request通过申请。
+              </p>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210916235541452.png"
+                alt="image-20210916235541452"
+                style="zoom: 50%"
+              />
 
-          <div class="post-tags">
-              <a href="/tags/git%E4%B8%8EGitHub/" rel="tag"><i class="fa fa-tag"></i> git与GitHub</a>
-          </div>
+              <h2 id="四、ssh免密登录-单个账号">
+                <a
+                  href="#四、ssh免密登录-单个账号"
+                  class="headerlink"
+                  title="四、ssh免密登录(单个账号)"
+                ></a
+                >四、ssh免密登录(单个账号)
+              </h2>
+              <p>
+                &emsp;&emsp;通过ssh免密操作，当自己将本地仓库push到远程仓库时就不需要密码验证了。
+              </p>
+              <h3 id="1、免密登录实现基础">
+                <a href="#1、免密登录实现基础" class="headerlink" title="1、免密登录实现基础"></a
+                >1、免密登录实现基础
+              </h3>
+              <h4 id="1-gt-、进入用户主目录">
+                <a
+                  href="#1-gt-、进入用户主目录"
+                  class="headerlink"
+                  title="1&gt;、进入用户主目录"
+                ></a
+                >1&gt;、进入用户主目录
+              </h4>
+              <p><code>cd ~</code></p>
+              <p><code>pwd</code></p>
+              <h4 id="2-gt-、通过下面的命令即可在用pwd命令得到的目录下建立一个-ssh文件">
+                <a
+                  href="#2-gt-、通过下面的命令即可在用pwd命令得到的目录下建立一个-ssh文件"
+                  class="headerlink"
+                  title="2&gt;、通过下面的命令即可在用pwd命令得到的目录下建立一个.ssh文件"
+                ></a
+                >2&gt;、通过下面的命令即可在用pwd命令得到的目录下建立一个.ssh文件
+              </h4>
+              <p><code>ssh-keygen -t rsa -C &lt;个人的GitHub账号邮箱地址&gt;</code></p>
+              <p><code>cd ./.ssh</code></p>
+              <p><code>ls</code></p>
+              <blockquote>
+                <p>
+                  通过上面的命令，不仅生成了一个.ssh文件，并且该文件目录下自动生成了id_rsa和id_rsa.pub两个文件
+                </p>
+              </blockquote>
+              <h4 id="3-gt-、复制id-rsa-pub文件里的全部秘钥内容">
+                <a
+                  href="#3-gt-、复制id-rsa-pub文件里的全部秘钥内容"
+                  class="headerlink"
+                  title="3&gt;、复制id_rsa.pub文件里的全部秘钥内容"
+                ></a
+                >3&gt;、复制id_rsa.pub文件里的全部秘钥内容
+              </h4>
+              <p>在上面代码的基础上，写人下面的命令</p>
+              <p><code>vi id_rsa.pub</code></p>
+              <blockquote>
+                <p>
+                  通过上面的命令，得到的结果即为
+                  <span style="background-color: yellow">秘钥内容</span>，复制后输入命令：<code
+                    >:wq </code
+                  >即可退出
+                </p>
+              </blockquote>
+              <h4 id="4-gt-、将秘钥内容与GitHub账号相关联">
+                <a
+                  href="#4-gt-、将秘钥内容与GitHub账号相关联"
+                  class="headerlink"
+                  title="4&gt;、将秘钥内容与GitHub账号相关联"
+                ></a
+                >4&gt;、将秘钥内容与GitHub账号相关联
+              </h4>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917111533900.png"
+                alt="image-20210917111533900"
+                style="zoom: 50%"
+              />
 
-        
-  <div class="post-widgets">
-    <div class="wp_rating">
-      <div id="wpac-rating"></div>
-    </div>
-  </div>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210917113434860.png"
+                alt="image-20210917113434860"
+                style="zoom: 50%"
+              />
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/09/03/%E7%94%A8Markdown%E5%86%99%E5%8D%9A%E6%96%87/" rel="prev" title="用Markdown写博文">
-                  <i class="fa fa-chevron-left"></i> 用Markdown写博文
-                </a>
+              <h3 id="2、ssh免密登录方式的使用">
+                <a
+                  href="#2、ssh免密登录方式的使用"
+                  class="headerlink"
+                  title="2、ssh免密登录方式的使用"
+                ></a
+                >2、ssh免密登录方式的使用
+              </h3>
+              <h4 id="1-gt-、为项目仓库地址添加一个ssh地址别名">
+                <a
+                  href="#1-gt-、为项目仓库地址添加一个ssh地址别名"
+                  class="headerlink"
+                  title="1&gt;、为项目仓库地址添加一个ssh地址别名"
+                ></a
+                >1&gt;、为项目仓库地址添加一个ssh地址别名
+              </h4>
+              <p><code>git remote add origin_ssh &lt;远程项目仓库的ssh地址&gt;</code></p>
+              <p><code>git push origin_ssh master</code></p>
+              <blockquote>
+                <p>即：git命令和前面的一样，只是涉及origin时，将origin改为origin_ssh即可</p>
+              </blockquote>
+              <h2 id="五、Sourcetree客户端">
+                <a href="#五、Sourcetree客户端" class="headerlink" title="五、Sourcetree客户端"></a
+                >五、Sourcetree客户端
+              </h2>
+              <img
+                src="/hexo_demo/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/image-20210915131512142.png"
+                alt="image-20210915131512142"
+                style="zoom: 50%"
+              />
+
+              <blockquote>
+                <p>注意： ①使用分支时，不能有未提交文件的分支。</p>
+              </blockquote>
+              <h3 id="1、重置到当前分支到此次提交">
+                <a
+                  href="#1、重置到当前分支到此次提交"
+                  class="headerlink"
+                  title="1、重置到当前分支到此次提交"
+                ></a
+                >1、重置到当前分支到此次提交
+              </h3>
+              <p>&emsp;&emsp; &emsp;&emsp; —-&gt; 通常选择强制合并</p>
+              <h3 id="2、回滚提交">
+                <a href="#2、回滚提交" class="headerlink" title="2、回滚提交"></a>2、回滚提交
+              </h3>
+              <p>&emsp;&emsp; &emsp;&emsp;—-&gt;操作自动合并master分支问题</p>
+              <h3 id="3、查看历史版本">
+                <a href="#3、查看历史版本" class="headerlink" title="3、查看历史版本"></a
+                >3、查看历史版本
+              </h3>
+              <p>
+                &emsp;&emsp;
+                &emsp;&emsp;—-&gt;双击即可查看的历史节点（前提：当前没有未提交的修改文件）
+              </p>
+              <h3 id="4、修改历史版本并创建新的分支">
+                <a
+                  href="#4、修改历史版本并创建新的分支"
+                  class="headerlink"
+                  title="4、修改历史版本并创建新的分支"
+                ></a
+                >4、修改历史版本并创建新的分支
+              </h3>
+              <p>&emsp;&emsp; &emsp;&emsp;—-&gt;创建新的分支（前提：要给它命名）</p>
+              <h3 id="5、分支合并💖">
+                <a href="#5、分支合并💖" class="headerlink" title="5、分支合并💖"></a>5、分支合并💖
+              </h3>
+              <p>&emsp;&emsp; &emsp;&emsp;—-&gt;最后一定会发生</p>
+              <h3 id="6、合并冲突🤔">
+                <a href="#6、合并冲突🤔" class="headerlink" title="6、合并冲突🤔"></a>6、合并冲突🤔
+              </h3>
+              <p>&emsp;&emsp; &emsp;&emsp;—-&gt;呵呵，我懂就行</p>
+              <br />
+
+              <h2 id="五、友情提示：">
+                <a href="#五、友情提示：" class="headerlink" title="五、友情提示："></a
+                >五、友情提示：
+              </h2>
+              <p>
+                ​ &emsp;&emsp;<a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://gitee.com/all-about-git"
+                  >软件、插件下载</a
+                >
+              </p>
+              <p>
+                ​ &emsp;&emsp;
+                <a target="_blank" rel="noopener" href="https://www.bootcss.com/p/git-guide/"
+                  >git命令学习文档</a
+                >
+              </p>
+              <p>
+                ​ &emsp;&emsp;<a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.bilibili.com/video/BV1qg41177Dd?from=search&seid=1835252203833884066&spm_id_from=333.337.0.0"
+                  >Sourcetree学习视频</a
+                >
+              </p>
+              <p>
+                ​ &emsp;&emsp;<a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.bilibili.com/video/BV17o4y1Q7Sx?p=1"
+                  >git的学习视频</a
+                >
+              </p>
+              <blockquote>
+                <p>
+                  更多内容，欢迎🎉🎉光临<a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/Lencamo"
+                    >https://github.com/Lencamo</a
+                  >
+                </p>
+              </blockquote>
             </div>
-            <div class="post-nav-item">
-                <a href="/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/" rel="next" title="VMware搭建Linux结点">
-                  VMware搭建Linux结点 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
+
+            <footer class="post-footer">
+              <div class="post-copyright">
+                <ul>
+                  <li class="post-copyright-author"><strong>本文作者： </strong>Lencamo</li>
+                  <li class="post-copyright-link">
+                    <strong>本文链接：</strong>
+                    <a
+                      href="https://lencamo.cn/2021/09/17/git%E5%91%BD%E4%BB%A4%E4%B8%8ESourcetree%E7%9A%84%E4%BD%BF%E7%94%A8/"
+                      title="git命令与Sourcetree的使用"
+                      >https://lencamo.cn/2021/09/17/git命令与Sourcetree的使用/</a
+                    >
+                  </li>
+                  <li class="post-copyright-license">
+                    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用
+                    <a
+                      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                      rel="noopener"
+                      target="_blank"
+                      ><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a
+                    >
+                    许可协议。转载请注明出处！
+                  </li>
+                </ul>
+              </div>
+
+              <div class="post-tags">
+                <a href="/hexo_demo/tags/git%E4%B8%8EGitHub/" rel="tag"
+                  ><i class="fa fa-tag"></i> git与GitHub</a
+                >
+              </div>
+
+              <div class="post-widgets">
+                <div class="wp_rating">
+                  <div id="wpac-rating"></div>
+                </div>
+              </div>
+
+              <div class="post-nav">
+                <div class="post-nav-item">
+                  <a
+                    href="/hexo_demo/2021/09/03/%E7%94%A8Markdown%E5%86%99%E5%8D%9A%E6%96%87/"
+                    rel="prev"
+                    title="用Markdown写博文"
+                  >
+                    <i class="fa fa-chevron-left"></i> 用Markdown写博文
+                  </a>
+                </div>
+                <div class="post-nav-item">
+                  <a
+                    href="/hexo_demo/2021/10/09/VMware%E6%90%AD%E5%BB%BALinux%E7%BB%93%E7%82%B9/"
+                    rel="next"
+                    title="VMware搭建Linux结点"
+                  >
+                    VMware搭建Linux结点 <i class="fa fa-chevron-right"></i>
+                  </a>
+                </div>
+              </div>
+            </footer>
+          </article>
+        </div>
+
+        <div class="comments utterances-container"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+          &copy;
+          <span itemprop="copyrightYear">2021</span>
+          <span class="with-love">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="author" itemprop="copyrightHolder">Lencamo</span>
+        </div>
+        <div class="wordcount">
+          <span class="post-meta-item">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-chart-line"></i>
+            </span>
+            <span>站点总字数：</span>
+            <span title="站点总字数">17k</span>
+          </span>
+          <span class="post-meta-item">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-coffee"></i>
+            </span>
+            <span>站点阅读时长 &asymp;</span>
+            <span title="站点阅读时长">16 分钟</span>
+          </span>
+        </div>
+        <div class="busuanzi-count">
+          <script
+            async
+            src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+          ></script>
+
+          <span class="post-meta-divider">|</span>
+          <span class="post-meta-item-icon">
+            <i class="fa fa-area-chart"></i>
+          </span>
+
+          <span class="post-meta-item-text">站点总字数：</span>
+
+          <span title="post.totalcount"> 8.4k字 </span>
+          <!--<span title="站点总字数">17k</span>-->
+
+          <span class="post-meta-item" id="busuanzi_container_site_uv">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-user"></i>
+            </span>
+            <span class="site-uv" title="总访客量">
+              <span id="busuanzi_value_site_uv"></span>
+            </span>
+          </span>
+          <span class="post-meta-item" id="busuanzi_container_site_pv">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-eye"></i>
+            </span>
+            <span class="site-pv" title="总访问量">
+              <span id="busuanzi_value_site_pv"></span>
+            </span>
+          </span>
+        </div>
+        <script
+          color="0,0,255"
+          opacity="0.5"
+          zIndex="-1"
+          count="99"
+          src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"
+        ></script>
+      </div>
     </footer>
-  </article>
-</div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"
+      integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/hexo_demo/js/comments.js"></script>
+    <script src="/hexo_demo/js/utils.js"></script>
+    <script src="/hexo_demo/js/motion.js"></script>
+    <script src="/hexo_demo/js/next-boot.js"></script>
 
+    <script src="https://embed.widgetpack.com/widget.js" async></script>
+    <script class="next-config" data-name="rating" type="application/json">
+      { "enable": true, "id": null, "color": "#fc6423" }
+    </script>
+    <script src="/hexo_demo/js/third-party/rating.js"></script>
+    <script src="/hexo_demo/js/third-party/search/local-search.js"></script>
 
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+    <script class="next-config" data-name="utterances" type="application/json">
+      {
+        "enable": true,
+        "repo": "Lencamo/discuss-utterances",
+        "issue_term": "pathname",
+        "theme": "github-light"
+      }
+    </script>
+    <script src="/hexo_demo/js/third-party/comments/utterances.js"></script>
 
-
-    <div class="comments utterances-container"></div>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Lencamo</span>
-</div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-      <span>站点总字数：</span>
-    <span title="站点总字数">17k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">16 分钟</span>
-  </span>
-</div>
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">站点总字数：</span>
-    
-	<span title="post.totalcount">
-     8.4k字 </span>
-    <!--<span title="站点总字数">17k</span>-->
-  
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
-
-
-
-
-
-
-
-    </div>
-  </footer>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
-
-  
-  <script src="https://embed.widgetpack.com/widget.js" async></script>
-  <script class="next-config" data-name="rating" type="application/json">{"enable":true,"id":null,"color":"#fc6423"}</script>
-  <script src="/js/third-party/rating.js"></script>
-<script src="/js/third-party/search/local-search.js"></script>
-
-
-
-
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"Lencamo/discuss-utterances","issue_term":"pathname","theme":"github-light"}</script>
-<script src="/js/third-party/comments/utterances.js"></script>
-
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":180,"height":300,"hOffset":30,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
+    <script src="/hexo_demo/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script>
+    <script>
+      L2Dwidget.init({
+        pluginRootPath: 'live2dw/',
+        pluginJsPath: 'lib/',
+        pluginModelPath: 'assets/',
+        tagMode: false,
+        debug: false,
+        model: { jsonPath: '/hexo_demo/live2dw/assets/miku.model.json' },
+        display: { position: 'right', width: 180, height: 300, hOffset: 30, vOffset: -20 },
+        mobile: { show: false },
+        react: { opacity: 0.8 },
+        log: false
+      })
+    </script>
+  </body>
 </html>
